@@ -70,6 +70,35 @@ align-items: center;
 font-weight: 700;
 color: #000000;
 }
+#powerhouse{
+    /* background-color: aqua; */
+    display: flex;
+    color:white;
+    margin-top:20px ;
+    /* align-items: center; */
+    justify-content: center;
+}
+.formm{
+    display: flex;
+    justify-content: center;
+    margin-left: 40px;
+    margin-right: 40px ;
+}
+
+.input-grey .form-control {
+    /* border-radius: .125rem; */
+  }
+  
+  .form-control:focus {
+    /* background-color: rgba(249, 43, 43, 0.3); */
+  }
+
+  .input-grey input::placeholder {
+    /* color: rgb(224, 18, 18); */
+  }
+.img{
+    background-image: url("/assets/Screenshot\ \(7\).png");
+}
 
 
 
