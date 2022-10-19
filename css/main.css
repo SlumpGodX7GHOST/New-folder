@@ -20,15 +20,15 @@ color: #FFFFFF;
     /* position: absolute; */
     width: 100%;
     height: 20px;
-    top: 120px;
-    /* background-image: url(/assets/Screenshot\ \(7\).png); */
+    /* top: 120px; */
+    background-image: url(/assets/ombre\ line-01.png);
     /* background: url(/assets/france.jpg);     */
 }
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     .content {
       font-size: 10px;
-    }
-  }
+    } */
+  
 #content{
     /* font-size:10vw; */
     position:relative;
@@ -40,7 +40,7 @@ color: #FFFFFF;
     font-size: 44px;
     font-family: 'Montserrat', sans-serif;
     /* font-style: normal; */
-    font-weight: 400;
+    font-weight: 300;
     /* font-size: 64px; */
     /* line-height: 78px; */
     color: #000000;
@@ -53,9 +53,11 @@ color: #FFFFFF;
     /* background-color: aqua; */
 }
 #button{
-    margin-top:25px ;
+    /* margin-top:15px ; */
     /* background-color: #9FA6B2; */
-    padding:50px ;
+    /* padding:50px ; */
+    padding-left: 50px;
+    padding-bottom: 20px;
 }
 #utopictxt{
     font-family: 'Montserrat', sans-serif;
@@ -88,7 +90,9 @@ color: #000000;
 }
 #imgtext{
     background-image:url(/assets/get_started_bg.jpg) ;
-    height: 500px;
+    /* background-color: aqua; */
+    /* margin:100px ; */
+    /* height: 500px; */
     width: 400px;
     padding:150px ;
 }
@@ -101,17 +105,6 @@ color: #000000;
     font-size: 20px;
     /* background-color: aqua; */
 }
-.input-grey .form-control {
-    /* border-radius: .125rem; */
-  }
-  
-  .form-control:focus {
-    /* background-color: rgba(249, 43, 43, 0.3); */
-  }
-
-  .input-grey input::placeholder {
-    /* color: rgb(224, 18, 18); */
-  }
 .img{
     background-image: url("/assets/Screenshot\ \(7\).png");
 }
