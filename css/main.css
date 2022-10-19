@@ -138,7 +138,7 @@ color: #000000;
 }
 .container2 {
     margin: auto;
-    width: auto;
+    /* width: auto; */
   }
   
   .gallery-wrap {
