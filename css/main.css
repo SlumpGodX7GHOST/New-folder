@@ -90,8 +90,8 @@ color: #000000;
 }
 #imgtext{
     background-image:url(/assets/get_started_bg.jpg) ;
-    /* background-color: aqua; */
-    /* margin:100px ; */
+    background-color: aqua;
+    margin:100px ;
     /* height: 500px; */
     width: 400px;
     padding:150px ;
@@ -99,11 +99,11 @@ color: #000000;
 
 #today{
     padding:150px 20px 0px 0px;
-    /* margin: 80px; */
+    margin: 80px;
 
     font-weight:600 ;
     font-size: 20px;
-    /* background-color: aqua; */
+    /* background-color: rgb(68, 255, 0); */
 }
 .img{
     background-image: url("/assets/Screenshot\ \(7\).png");
