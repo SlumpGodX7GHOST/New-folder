@@ -20,15 +20,15 @@ color: #FFFFFF;
     /* position: absolute; */
     width: 100%;
     height: 20px;
-    top: 120px;
-    /* background-image: url(/assets/Screenshot\ \(7\).png); */
+    /* top: 120px; */
+    background-image: url(/assets/ombre\ line-01.png);
     /* background: url(/assets/france.jpg);     */
 }
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     .content {
       font-size: 10px;
-    }
-  }
+    } */
+  
 #content{
     /* font-size:10vw; */
     position:relative;
@@ -40,7 +40,7 @@ color: #FFFFFF;
     font-size: 44px;
     font-family: 'Montserrat', sans-serif;
     /* font-style: normal; */
-    font-weight: 400;
+    font-weight: 300;
     /* font-size: 64px; */
     /* line-height: 78px; */
     color: #000000;
@@ -53,9 +53,11 @@ color: #FFFFFF;
     /* background-color: aqua; */
 }
 #button{
-    margin-top:25px ;
+    /* margin-top:15px ; */
     /* background-color: #9FA6B2; */
-    padding:50px ;
+    /* padding:50px ; */
+    padding-left: 50px;
+    padding-bottom: 20px;
 }
 #utopictxt{
     font-family: 'Montserrat', sans-serif;
@@ -74,9 +76,11 @@ color: #000000;
 }
 #powerhouse{
     /* background-color: aqua; */
+    font-size: 34px;
     display: flex;
     color:white;
     margin-top:20px ;
+    /* margin-bottom: 30px; */
     /* align-items: center; */
     justify-content: center;
 }
@@ -88,34 +92,57 @@ color: #000000;
 }
 #imgtext{
     background-image:url(/assets/get_started_bg.jpg) ;
-    height: 500px;
+    background-color: aqua;
+    margin:100px ;
+    /* height: 500px; */
     width: 400px;
     padding:150px ;
 }
 
 #today{
-    padding:150px 20px 0px 0px;
-    /* margin: 80px; */
-
-    font-weight:600 ;
+    
+    font-family: 'Montserrat', sans-serif;
+    padding:10px 20px 0px 0px;
+    margin: 80px 80px;
+    
+    font-weight:400 ;
     font-size: 20px;
-    /* background-color: aqua; */
+    /* background-color: rgb(68, 255, 0); */
 }
-.input-grey .form-control {
-    /* border-radius: .125rem; */
-  }
-  
-  .form-control:focus {
-    /* background-color: rgba(249, 43, 43, 0.3); */
-  }
-
-  .input-grey input::placeholder {
-    /* color: rgb(224, 18, 18); */
-  }
 .img{
     background-image: url("/assets/Screenshot\ \(7\).png");
 }
+#utext{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 200;
+}
 
+#insight{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    margin-top: 35px;
+    /* margin: 30px; */
+    /* line-height: 24px; */
+    /* display: flex; */
+    /* align-items: center; */
+
+}
+#viewall{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    margin-top: 35px;
+    color: #040404;
+}
+#atag{
+    color:black ;
+    font-weight: 700;
+}
 #aoe{
     font-size: 48px;
     /* position: absolute; */
