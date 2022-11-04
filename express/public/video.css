@@ -6,14 +6,54 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 41vh;
+    
+font-family: 'Montserrat';
     overflow: hidden;
 }
 .section h1{
     text-align: center;
-    font-size: 8rem;
+    
+font-family: 'Montserrat';
+    /* font-size: 8rem; */
     /* background: #eee; */
     /* padding: 20px 20px; */
-    margin: 35px;
+    /* margin: 35px; */
+    z-index: 1;
+    /* background-color: rebeccapurple; */
+}
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    /* width: 100%; */
+}
+.color-overlay{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+}
+
+@media screen and  (max-width:400px){  
+.section{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.section h1{
+    text-align: center;
+    /* font-size: 8rem; */
+    /* background: #eee; */
+    /* padding: 20px 20px; */
+    /* margin: 35px; */
     z-index: 1;
     /* background-color: rebeccapurple; */
 }
@@ -33,4 +73,4 @@
     height: 100vh;
     opacity: 0.5;
 }
-
+}
