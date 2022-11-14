@@ -34,3 +34,9 @@
 #instrument.collapsing{
     /* max-height:30vh; */
 }
+
+.rm{
+  font-size: large;
+  /* background-color: aqua; */
+  font-weight:600;
+}
