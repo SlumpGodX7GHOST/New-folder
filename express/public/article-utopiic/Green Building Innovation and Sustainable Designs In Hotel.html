@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="home2.css" media="screen">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Blog Page/css/main.css">
+
+    <style>
+        .top-right {
+            position: absolute;
+            background-color: white;
+            font-size: 1.5vh;
+            padding: 4px 7px 4px 7px;
+            /* top: 8px; */
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid;
+            box-shadow: 1px 1px 2px 1px #888888;
+            right: 0px;
+            /* color: black; */
+            /* box-shadow: 2px 2px red; */
+            /* text-shadow:1px 1px 2px rgb(17, 92, 232); */
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #817b7b;
+            z-index: 9;
+        }
+
+        #myPDF {
+            display: none;
+            width: 100%;
+            height: 975px;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: black;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <title>INSIGHTS</title>
+</head>
+
+<body>
+
+    <!-- form popup 1 -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container" name="myForm" id="report1" action="#">
+            <!--take data from the form in backend and  redirect to the pdf file according the id -->
+
+
+
+            <input type="text" placeholder="Enter Name" id="NameReport1" name="userName" required>
+
+
+            <input type="text" placeholder="Enter Mail" id="MailReport1" name="userMail" required>
+
+
+            <button type="submit" class="btn cancel" onclick="validate()">Submit</button>
+            <!--onclick="viewReport1()" -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- form popup end 1 -->
+    <!-- header div  -->
+    <header class="header-area">
+        <div class="header-container">
+
+            <!-- <div class="col" style="background-color: red;">sf</div> -->
+            <div class=" site-logo" d="logoid">
+                <a><img src="./images/Utopiic Registered logo-02.png" width="200vh">
+                </a>
+            </div>
+            <div class=" mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class=" site-nav-menu">
+                <ul class="primary-menu" style="padding-top: 1vh;">
+                    <li class="text-white">About us</li>
+                    <li class="text-white">Insights</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="container-fluid1"></div>
+    </header>
+    <!-- artile 1 -->
+
+    <body class="u-body u-xl-mode">
+        <header class="u-clearfix u-header u-header" id="sec-bafd">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <h1 class="u-text u-text-default u-text-1" style="padding-top:3.5% ;">Green building Innovation and Sustainable Designs in Hotel</h1>
+        </header>
+        <section class="u-clearfix u-white u-section-1" id="carousel_fb95">
+            <div class="u-clearfix u-sheet u-sheet-1">
+                <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div
+                                class="u-container-style u-layout-cell u-left-cell u-similar-fill u-size-27 u-layout-cell-1">
+                                <div class="u-container-layout u-container-layout-1">
+                                    <img class="u-absolute-hcenter-xs u-expanded u-image u-image-1"
+                                        src="images/img_220111113551.jpg">
+                                </div>
+                            </div>
+                            <div
+                                class="u-container-style u-layout-cell u-right-cell u-similar-fill u-size-33 u-layout-cell-2">
+                                <div class="u-container-layout u-container-layout-2">
+                                    <p class="u-text u-text-1">&nbsp;Green building is the practice of creating
+                                        structures using processes that are environmentally responsible and
+                                        resource-efficient throughout a building's life-cycle from sitting to design,
+                                        construction, operation, maintenance, renovation and deconstruction. Green
+                                        building is also known as a sustainable or high performance building.
+                                        <br>
+                                        Green buildings in the hotels are designed to reduce the overall impact of the
+                                        built environment on human health and the natural environment by:
+                                        <br>
+                                    <ul>
+                                        <li> Efficiently using energy, water, and other resources</li>
+                                        <li> Protecting occupant health and improving employee productivity</li>
+                                        <li> Reducing waste, pollution and environmental degradation</li>
+                                    </ul><br>
+                                    For example, green buildings may incorporate sustainable materials in their
+                                    construction (e.g., reused, recycled-content, or made from renewable resources);
+                                    create healthy indoor environments with minimal pollutants (e.g., reduced product
+                                    emissions); and/or feature landscaping that reduces water usage (e.g., by using
+                                    native plants that survive without extra watering).
+
+                                    <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="u-text u-text-2"> However, In the current competitive hotel industry, are green buildings
+                    really advantageous? And does the hotel industry really require green building designs? If yes, how
+                    does it influence tourists’ choice of hotel accommodation? Does green building persuade customers to
+                    recommend the hotel to their friends?
+                    <br>
+                    The simple answer is yes!! Today's consumers are more eco-conscious than ever. They demand that
+                    brands adopt sustainable solutions, such as getting rid of single-use plastics like straws and
+                    shopping bags and businesses that fail to adapt may find customers visiting their competitors.
+                    <br><br>
+                    Sustainability is an essential trend in the hospitality industry. Some 19% of travelers said they
+                    would pay more for a vacation with a green electricity resort. Consumers are becoming more aware of
+                    their carbon footprint, and are taking steps to reduce it - including opting for eco-friendly
+                    travel.
+                    <br><br>
+                    Apart from the consumer behavior, green building initiatives while being good for the environment,
+                    also come with a financial gain. Sustainable hotels have lower operating costs, and they command
+                    higher building values while receiving tax breaks and incentives.
+                    This is the reason why many hospitality brands are moving towards green and sustainable construction
+                    as a ground-up solution.<br>
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-2"
+                    src="images/downloaded1.jpg" alt="" data-image-width="960" data-image-height="640">
+            </div>
+        </section>
+        <section class="u-clearfix u-section-2" id="sec-53af">
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1" style="padding-top: 0% !important;">
+                <p class="u-text u-text-1"> Over the past decade or so, Indian hoteliers have started taking a serious
+                    note of the need for ‘greening’ their hotels and operations. India has the third largest number of
+                    LEED-certified hotels and the largest number of LEED Platinum hotel projects in the world. Even
+                    hotels that have already achieved LEED at the design stage are now going for LEED Operations and
+                    Maintenance (O+M) certification to further highlight their efficiencies and demonstrate their
+                    continued commitment to sustainable performance.
+                    <br>
+                    As places of relaxation and respite, hotels should inherently focus on the health and well-being of
+                    their occupants. Green buildings not only deliver on both these counts but also go further by also
+                    improving the productivity and happiness of employees.<br>
+                <h4 style="padding-top: 4.5%; padding-bottom:60px;"> How do we perceive the adoption of green practices in India’s luxury hospitality segment?</h4>
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-3"
+                    src="images/downloaded2.jpg" alt="" data-image-width="960" data-image-height="640" style="width: 100%; max-height: 437px;">
+            </div>
+
+
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1">
+                <p class="u-text u-text-1" style="padding-top:60px ;"> Hotels and other hospitality venues have a
+                    significant opportunity to reduce negative environmental impacts associated with guest rooms, event
+                    space, and general facility use through measures such as energy and water efficiency, waste
+                    reduction and management, sustainable and local purchasing, and use of alternative transportation.
+                    <br>
+                    Hotels consume natural resources at an extraordinarily high rate, as they are occupied 24 hours a
+                    day, seven days a week. According to a Trip Advisor survey, nearly two-thirds of travelers reported
+                    plans to make more environmentally friendly choices over the next year. And while on vacation, 88 %
+                    of travelers turned off lights when not in their hotel room, 78 % participated in the hotel’s linen
+                    and towel reuse programs and 58 % used recycling in the hotel. As guests demand more sustainable
+                    travel solutions, hotels are positioned to deliver high quality experiences with the help of tools
+                    like LEED, that positively impact human health and the environment.
+                    <br>
+                    Also, Incorporating LEED includes sustainable site development, water savings, energy efficiency,
+                    materials selection and indoor environmental quality.
+                <h4 style="padding-top: 4.5%; padding-bottom:60px;">Future trends in this space in relation to the hospitality industry?</h4>
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-4"
+                    src="images/downloaded3.jpg" alt="" data-image-width="960" data-image-height="640" style="width: 100%; max-height: 437px;">
+            </div>
+
+
+            <div class="u-clearfix u-sheet u-valign-top-lg ">
+                <p class="u-text u-text-1" style="padding-top:60px ; padding-bottom: 40px;"> The hospitality industry is noticing a change in
+                    consumer behavior. Consumers are requesting sustainable resources, evaluating the indoor environment
+                    for health concerns and placing a preference on sustainable buildings. As this trend continues,
+                    consistent metrics and standards to support the quality of product the hospitality industry delivers
+                    will become even more important for a variety of stakeholders, including owners, investors and
+                    operators. Integrating green building strategies into the design, construction and daily operations
+                    of hotels makes business sense and can be an important part of a company’s commitment to
+                    sustainability.
+                </p>
+
+            </div>
+
+    </body>
+
+
+    <!-- article 1 end -->
+    <!-- Footer -->
+    <div class="container-fluid1">
+
+        <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+            <!-- ombre div  -->
+            <div id="container-fluid1"></div>
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+                            <!-- Links -->
+
+                            <h5>
+                                <a href="#!" class="text-white" style="text-decoration: none;">About us</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./privacy.html" class="text-white" style="text-decoration: none;">Privacy
+                                    Policy</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./tc.html" class="text-white" style="text-decoration: none;">Terms &
+                                    Conditions</a>
+                            </h5>
+
+                            <h5>
+                                <a href="" class="text-white" style="text-decoration: none;">Contact</a>
+                            </h5>
+                        </div>
+                        <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for
+                                        our newsletter for
+                                        the latest news and insights on sustainability and climate change
+                                    </label>
+
+                                    <div class="col p-4"> <input type="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter email"></div>
+                                    <div class="col p-4"><button type="submit"
+                                            class="btn btn-secondary">Subscribe</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+</body>
+<!-- <script src="BlogJs/Blog1.js"></script> -->
+
+</html>
