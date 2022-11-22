@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Home.css" media="screen">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Blog Page/css/main.css">
+
+    <style>
+        .top-right {
+            position: absolute;
+            background-color: white;
+            font-size: 1.5vh;
+            padding: 4px 7px 4px 7px;
+            /* top: 8px; */
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid;
+            box-shadow: 1px 1px 2px 1px #888888;
+            right: 0px;
+            /* color: black; */
+            /* box-shadow: 2px 2px red; */
+            /* text-shadow:1px 1px 2px rgb(17, 92, 232); */
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #817b7b;
+            z-index: 9;
+        }
+
+        #myPDF {
+            display: none;
+            width: 100%;
+            height: 975px;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: black;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <title>INSIGHTS</title>
+</head>
+
+<body>
+
+    <!-- form popup 1 -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container" name="myForm" id="report1" action="#">
+            <!--take data from the form in backend and  redirect to the pdf file according the id -->
+
+
+
+            <input type="text" placeholder="Enter Name" id="NameReport1" name="userName" required>
+
+
+            <input type="text" placeholder="Enter Mail" id="MailReport1" name="userMail" required>
+
+
+            <button type="submit" class="btn cancel" onclick="validate()">Submit</button>
+            <!--onclick="viewReport1()" -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- form popup end 1 -->
+    <!-- header div  -->
+    <header class="header-area">
+        <div class="header-container">
+
+            <!-- <div class="col" style="background-color: red;">sf</div> -->
+            <div class=" site-logo" d="logoid">
+                <a><img src="./images/Utopiic Registered logo-02.png" width="200vh">
+                </a>
+            </div>
+            <div class=" mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class=" site-nav-menu">
+                <ul class="primary-menu" style="padding-top: 1vh;">
+                    <li class="text-white">About us</li>
+                    <li class="text-white">Insights</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="container-fluid1"></div>
+    </header>
+    <!-- artile 1 -->
+
+    <body class="u-body u-xl-mode">
+        <header class="u-clearfix u-header u-header" id="sec-bafd">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <h1 class="u-text u-text-default u-text-1" style="padding-top:3.5% ;">Net-Zero 2050 A New Horizon</h1>
+        </header>
+
+        <section class="u-clearfix u-white u-section-1" id="carousel_fb95">
+
+            <div class="u-clearfix u-sheet u-sheet" style="padding-bottom: 8% ;">
+
+                <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div
+                                class="u-container-style u-layout-cell u-left-cell u-similar-fill u-size-27 u-layout-cell-1">
+
+                                <div class="u-container-layout u-container-layout-1">
+                                    <img class="u-absolute-hcenter-xs u-expanded u-image u-image-1"
+                                        src="images/20220636085736.jpg">
+                                </div>
+                            </div>
+                            <div
+                                class="u-container-style u-layout-cell u-right-cell u-similar-fill u-size-33 u-layout-cell-2">
+                                <div class="u-container-layout u-valign-middle-md u-valign-top-xs u-container-layout-2">
+                                    <p class="u-text u-text-1">&nbsp;The world as we know is heading towards a great
+                                        decline. The Utopia which we imagine, where the perfection and beauty of the
+                                        world, living as a single state is far from our reach. But according to the
+                                        report ‘Net-Zero by 2050’, by the International Energy Agency (IEA) to visualize
+                                        a future where net zero is a possibility by the year 2050, a steep decline in
+                                        the use of non-renewable energies is a must. The report states, yes! It is not
+                                        just a distant dream but net-zero is something that is within our reach by the
+                                        year 2050, but only if we make big changes to preserve and conserve our
+                                        environment.
+                                        <br>
+                                        What is Net Zero you might ask?
+                                        <br>
+                                        Greenhouse gases impact our environment, both in a good and a bad way.
+                                        Greenhouse gases cause the greenhouse effect which traps heat inside our
+                                        atmosphere, this keeps our planet in the comfortable temperature range and in a
+                                        way makes our planet a sustainable box and ensures a sustainable life for us.
+                                        Without the greenhouse effect, our Earth would be a barren, frozen, and lifeless
+                                        piece of rock floating in the cosmos. Sunlight makes the earth habitable. While
+                                        30 percent of the solar energy that reaches our world is reflected in space,
+                                        approximately 70 percent passes through the atmosphere to the earth’s surface,
+                                        absorbed by the land, oceans, and atmosphere, and heats the planet. This heat is
+                                        then radiated back up in the form of invisible infrared light. While some of
+                                        this infrared light continues into space, the vast majority—indeed, some 90
+                                        percent—gets absorbed by atmospheric gases, known as greenhouse gases, and
+                                        redirected back toward the earth, causing further warming.<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="u-text u-text-2"> The main gases responsible for the greenhouse effect include carbon dioxide,
+                    methane, nitrous oxide, water vapour (which all occur naturally), and fluorinated gases (which are
+                    synthetic). Greenhouse gases have different chemical properties and are removed from the atmosphere,
+                    over time, by different processes. Carbon dioxide, for example, is absorbed by so-called carbon
+                    sinks such as plants, soil, and the ocean. Fluorinated gases are destroyed only by sunlight in the
+                    far upper atmosphere.
+<br>
+                    Our (humans) unregulated burning up of fossil fuels for the generation of energy has provided a
+                    boost to the greenhouse gases mainly, Carbon Dioxide, Methane, Nitrous Oxide, and Fluorinated Gases.
+                    This has further led to the trapping of these gases inside our atmosphere and leads to an increased
+                    greenhouse effect, increasing the temperature of the Earth and this phenomenon is called Global
+                    Warming.
+                    <br>
+                    As these greenhouse gases increase in the environment, the amount being produced and being expelled
+                    by the atmosphere has an imbalance that leads to global warming. When the balance between the number
+                    of greenhouse gases produced and the amount removed from the atmosphere is equal to zero then we
+                    reach net zero when the amount we add is no more than the amount taken away. This equilibrium of the
+                    greenhouse gases in the environment is known as Net-Zero.
+                    <br><br>
+                    Net-zero means achieving a balance between the greenhouse gases put into the atmosphere and those
+                    taken out.
+                    <br>
+                    Reaching net-zero applies the same principle, requiring us to balance the number of greenhouse gases
+                    we emit with the amount we remove. When what we add is no more than what we take away we reach net
+                    zero. This state is also referred to as carbon neutral; However, zero emissions and zero carbon are
+                    slightly different, as they usually mean that no emissions were produced in the first place.
+                    <br><br>
+                    To achieve a future where net-zero is an achievable dream, many breakthroughs need to be
+                    accomplished in a synergetic way between the governments of the world, where every industry needs to
+                    work together in tandem. Getting to a net-zero future, IEA recommends that from the year 2021, no
+                    new non-renewable energy should be used as such to generate energy destructively. Such as coal, oil,
+                    and gas sources are gracefully eliminated as the only major source of production of energy. Getting
+                    a net-zero emission is detrimental to the survival of our environment and society.
+                    <br><br>
+                    By 2050, almost 90% of the electricity produced globally will need to come from renewable sources –
+                    with 70% from solar and wind.
+                    <br><br>
+                    Investments in sectors such as electricity, infrastructures, and the energy used by the consumers
+                    have to evolve to enter a sustainable cycle with the help of renewable energies such as solar, wind,
+                    and hydro. Business sustainability, sustainable lifestyles, and green products need to be adopted by
+                    businesses and consumers all the same for a future that involves a net-zero goal. Companies also
+                    need to adopt environmentally friendly practices to better improve the impact they have on the
+                    environment with a sustainable framework for the business and become heavily environmentally
+                    friendly.
+                    <br><br>
+                    Over the next decade, the biggest increase will be needed in electricity generation, with annual
+                    investment shooting from about $0.5 trillion over the past five years to $1.6 trillion in 2030. By
+                    then, annual investment in renewables will have just topped the highest amount ever spent on fossil
+                    fuels to reach $1.3 trillion. At the same time, global investment in fossil fuels will need to fall
+                    steadily.
+                    <br><br>
+                    We as consumers will also need to adapt and implement these changes in our lives and understand the
+                    impact that these changes will carry. The IEA report also mentions the fact that COVID-19 has
+                    increased the awareness of the general populace and how their behaviour impacts the environment and
+                    how it can help us reach the 2050 net-zero goal.
+                    <br><br>
+                    It is also speculated that governments will also have a big role to play where they might have to
+                    implement big changes in terms of policies to better enforce these means of slowing increasing the
+                    use of transport systems, private or public, that run on a renewable energy source.
+                    <br><br>
+                    Even though we might be able to achieve the above where every business is sustainable and
+                    environmentally friendly and uses green energy and every consumer is aware of the impact they carry
+                    and readily act in a way that preserves our environment, getting to net-zero by the year 2050 is
+                    still not possible with the major innovation in the clean energy sector.
+                    <br><br>
+                    The advances available today along with the technologies in the market will help us to reduce
+                    emissions and get to net-zero but the global use of these implementations and changes also need to
+                    be addressed as without a global deployment of these measures the dream of a net-zero 2050 will
+                    remain a dream.
+                </p>
+            </div>
+
+    </body>
+
+    <!-- article 1 end -->
+    <!-- Footer -->
+    <div class="container-fluid1">
+
+        <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+            <!-- ombre div  -->
+            <div id="container-fluid1"></div>
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+                            <!-- Links -->
+
+                            <h5>
+                                <a href="#!" class="text-white" style="text-decoration: none;">About us</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./privacy.html" class="text-white" style="text-decoration: none;">Privacy
+                                    Policy</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./tc.html" class="text-white" style="text-decoration: none;">Terms &
+                                    Conditions</a>
+                            </h5>
+
+                            <h5>
+                                <a href="" class="text-white" style="text-decoration: none;">Contact</a>
+                            </h5>
+                        </div>
+                        <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for
+                                        our newsletter for
+                                        the latest news and insights on sustainability and climate change
+                                    </label>
+
+                                    <div class="col p-4"> <input type="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter email"></div>
+                                    <div class="col p-4"><button type="submit"
+                                            class="btn btn-secondary">Subscribe</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+</body>
+<!-- <script src="BlogJs/Blog1.js"></script> -->
+
+</html>

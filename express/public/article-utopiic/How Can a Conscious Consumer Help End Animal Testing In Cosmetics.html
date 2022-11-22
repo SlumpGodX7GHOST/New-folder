@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="home2.css" media="screen">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Blog Page/css/main.css">
+
+    <style>
+        .top-right {
+            position: absolute;
+            background-color: white;
+            font-size: 1.5vh;
+            padding: 4px 7px 4px 7px;
+            /* top: 8px; */
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid;
+            box-shadow: 1px 1px 2px 1px #888888;
+            right: 0px;
+            /* color: black; */
+            /* box-shadow: 2px 2px red; */
+            /* text-shadow:1px 1px 2px rgb(17, 92, 232); */
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #817b7b;
+            z-index: 9;
+        }
+
+        #myPDF {
+            display: none;
+            width: 100%;
+            height: 975px;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: black;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <title>INSIGHTS</title>
+</head>
+
+<body>
+
+    <!-- form popup 1 -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container" name="myForm" id="report1" action="#">
+            <!--take data from the form in backend and  redirect to the pdf file according the id -->
+
+
+
+            <input type="text" placeholder="Enter Name" id="NameReport1" name="userName" required>
+
+
+            <input type="text" placeholder="Enter Mail" id="MailReport1" name="userMail" required>
+
+
+            <button type="submit" class="btn cancel" onclick="validate()">Submit</button>
+            <!--onclick="viewReport1()" -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- form popup end 1 -->
+    <!-- header div  -->
+    <header class="header-area">
+        <div class="header-container">
+
+            <!-- <div class="col" style="background-color: red;">sf</div> -->
+            <div class=" site-logo" d="logoid">
+                <a><img src="./images/Utopiic Registered logo-02.png" width="200vh">
+                </a>
+            </div>
+            <div class=" mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class=" site-nav-menu">
+                <ul class="primary-menu" style="padding-top: 1vh;">
+                    <li class="text-white">About us</li>
+                    <li class="text-white">Insights</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="container-fluid1"></div>
+    </header>
+    <!-- artile 1 -->
+
+    <body class="u-body u-xl-mode">
+        <header class="u-clearfix u-header u-header" id="sec-bafd">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <h1 class="u-text u-text-default u-text-1" style="padding-top:3.5% ;">How Can a Conscious Consumer Help End Animal Testing In Cosmetics</h1>
+        </header>
+        <section class="u-clearfix u-white u-section-1" id="carousel_fb95">
+            <div class="u-clearfix u-sheet u-sheet-1">
+                <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div
+                                class="u-container-style u-layout-cell u-left-cell u-similar-fill u-size-27 u-layout-cell-1">
+                                <div class="u-container-layout u-container-layout-1">
+                                    <img class="u-absolute-hcenter-xs u-expanded u-image u-image-1"
+                                        src="images/img_220111114506.jpg">
+                                </div>
+                            </div>
+                            <div
+                                class="u-container-style u-layout-cell u-right-cell u-similar-fill u-size-33 u-layout-cell-2">
+                                <div class="u-container-layout u-container-layout-2">
+                                    <p class="u-text u-text-1">&nbsp;Before a cosmetic product ends up in your shower or
+                                        in your toiletry bag, there are many steps to follow along this path. A lot
+                                        happens, from brainstorming and product development to packaging design and
+                                        marketing mock-ups. And sometimes that includes animal testing. Studies have
+                                        shown that animal tests only correctly predict human response to cosmetics
+                                        40-60% of the time, while alternatives are accurate 80% of the time. Animal
+                                        testing is not only ineffective, but also expensive. However, in 80% of the
+                                        world's countries there are still no laws against animal testing on cosmetics.
+                                        The Body Shop wants to change that with its Forever Against Animal Testing
+                                        campaign.1 Launched last June, it has garnered 4.1 million signatures since
+                                        then, making it the largest campaign ever for the cause. Once they reach their
+                                        goal of 8 million, they will petition the United Nations with their campaign
+                                        partner Cruelty Free International2, the leading nonprofit organization
+                                        advocating for an end to animal testing, to create an international convention
+                                        banning the conducting animal tests. “A few years ago we surveyed clients in six
+                                        different countries around the world and asked them what topics mean the most to
+                                        them and animal testing is the most popular topic that really interests our
+                                        clients, which makes sense because we were our first brand in address this
+                                        issue,” said Jessie Macneil Brown, director of global campaigns for The Body
+                                        Shop.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="u-text u-text-2"> “But we felt there was a real discrepancy between what we saw in consumer
+                    trends around the demand for cruelty-free, vegan and vegetarian beauty products and that 80% of
+                    governments still don't have bans on experimentation with animals in cosmetics. You think that as
+                    activists we can do something. We had our last campaign against animal testing in 2013 when the
+                    European Union introduced its ban. It really is proven that one of the largest non-animal cosmetics
+                    markets in the world can innovate, prosper and grow without animal testing. "
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-2"
+                    src="images/downloaded-niddle.jpg" alt="" data-image-width="960" data-image-height="640">
+            </div>
+        </section>
+        <section class="u-clearfix u-section-2" id="sec-53af">
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1" style="padding-top: 0% !important;">
+                <p class="u-text u-text-1">To increase awareness and support for Forever Against Animal Testing, On
+                    January 23, The Body Shop and Cruelty Free International are running the world's first animal
+                    protest in front of the United Nations headquarters in New York City. The protest included eight
+                    dogs of various breeds and sizes, as well as protest posters and banners. They were joined by
+                    wildlife influencer and photographer Elias Friedman of TheDogist,3 who previously supported the
+                    campaign in the US and Canada, and canine influencer louboutinanyc4, also known as the New York
+                    cuddling golden retriever. "Dogs are animals that we love very much and many of us live with them at
+                    home," says Friedman. “For most people, it is probably easier to identify with dogs than with
+                    laboratory rats or other animals. We help animals to have the voice they don't have. The Forever
+                    Against Animal Testing campaign5is about something important and simple: no animals are required to
+                    test cosmetic products. There are humane alternatives that cosmetics companies should use instead. "
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-3"
+                    src="images/downloaded-we-better.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+            </div>
+
+
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1">
+                <p class="u-text u-text-1" style="padding-top:60px ;">The Body Shop and Cruelty Free International
+                    invite all companies that are against cosmetic animal testing to support the campaign. Both
+                    organizations met with UN officials last week. "Our passionate team has made real breakthroughs
+                    around the world for the many animals that suffer in the cruel tests of cosmetics, but there is
+                    still much to do," said Michelle Thew, CEO of Cruelty
+                    <br><br>
+                    1 https://www.thebodyshop.com/en-us/about-us/against-animal-testing
+                    <br><br>
+                    2 https://www.crueltyfreeinternational.org/
+                    <br><br>
+                    3 https://www.instagram.com/thedogist/?hl=en
+                    <br><br>
+                    4 https://www.instagram.com/louboutinanyc/?hl=en
+                    <br><br>
+                    5 http://www.foreveragainstanimaltesting.com/
+                    <br><br>
+                    Free International. “We work tirelessly with politicians and governments to ban the use of animals
+                    in cosmetic testing, convince regulators to accept cruelty-free testing, and encourage companies to
+                    free themselves from cruelty with our Leaping Bunny Certification. In a global market, it is
+                    important that all countries ban cosmetic animal testing to prevent testing from simply being
+                    relocated around the world to countries without effective laws. That is why we have launched our
+                    global campaign to ask all governments of the world to increase and ban cosmetic tests on animal
+                    testing.
+                    <br><br><br>
+
+
+
+                    So what can you do to help? First, sign the global petition at foreveragainstanimaltesting.com and
+                    share it with your circle. If you believe in cruelty-free products, you are only supporting the
+                    brands that make them. And there are many who do, from indie to global giants. Physicians Formula6
+                    has always been a cruelty-free brand committed to working with third-party vendors who share this
+                    philosophy, as has the global brand IsaDora7, which was recently launched in the United States.
+                    Urban Decay has been cruelty-free since its launch in 1996 and was the first brand to offer luxury
+                    makeup brushes that were completely synthetic. In 2006 it became the first prestigious brand with an
+                    online vegan shopping area. They partnered with PETA to create their first fully vegan eyeshadow
+                    palette to mark their 25th anniversary, raised funds for the Humane Society of the United States,
+                    and sponsored the Genesis Awards, which recognize the media for reporting on animal welfare. Last
+                    year, Urban Decay hosted a dog food festival on National Dog Day in London's West Hollywood last
+                    year to celebrate cruelty-free, with puppy massages, gourmet dog treats, professional dog portraits
+                    and booties like the custom branded straps, tennis balls and bandanas. Urban decay. They also just
+                    started their first influencer collaboration with Kristen Leanne, an advocate who only supports
+                    cruel brands on her Instagram. Then there's Lush, who has campaigned across the industry for over
+                    thirty years to combat the animal testing they report in their stores and on their shopping bags.
+                    They host the Lush Prize,8 a global awards ceremony where the company's founders give money to
+                    researchers working to find alternatives to animal testing; They have awarded nearly $2 million in
+                    prizes since 2012.
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-4"
+                    src="images/downloaded-cosmetic.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+            </div>
+
+
+            <div class="u-clearfix u-sheet u-valign-top-lg ">
+                <p class="u-text u-text-1" style="padding-top:60px ; padding-bottom: 40px;">Many natural and organic
+                    cosmetic brands have long been committed to this cause as part of their spirit. Hay Yes To, Alba
+                    Botanica, J?SÖN, Avalon Organics, S.W. Basics, The Seaweed Bath Co., and One Love Organics, to name
+                    a few. "Animal testing is completely unnecessary," Suzanne LeRoux, founder of One Love Organics.
+                    “Like individual food allergies, we can all react differently to topical agents. And a product
+                    tested on an animal will not produce the same result on a person. The practice is out of date and
+                    does not guarantee safety. We prefer the use of ingredients and products that have been tested on
+                    volunteer subjects so that the life and quality of life of animals can be saved, and the products
+                    have a more accurate safety result when used by humans. It is a profit for humans and animals to
+                    stop animal experiments. The decision to buy only cruelty-free products can have a big impact.
+                    Aligning with your dollar is ultimately what makes the biggest companies make changes."
+                    <br>
+                    Some beauty companies dedicated to this cause have raised funds and attention through their
+                    products. In addition to ensuring that all Kat Von D Beauty are vegan and cruelty-free, vegan Kat
+                    Von D supports animal rights through her volunteer work with organizations like Farm Sanctuary, an
+                    animal welfare organization that was the first shelter of animals of the United States. The brand
+                    released four special editions of its best-selling Everlasting liquid lipsticks in the aid of Farm
+                    Sanctuary,9 each named after real animals there. Too Faced is also cruelty-free and donated $
+                    <br><br>
+                    6 https://www.physiciansformula.com/
+                    <br><br>
+                    7 https://www.isadora.com/global/
+                    <br><br>
+                    8 https://www.lushusa.com/Stories-Article?cid=article_whats-the-lush-prize
+                    <br><br>
+                    9 https://www.farmsanctuary.org/
+
+                    <br><br>
+
+
+                    250,000 to the Best Friend`s Animal Society in October 2017. They started with the Clover eyeshadow
+                    palette,10 which Best Friends Animal Society benefited from.
+
+                    <br>
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-4"
+                    src="images/downloaded-sugar.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+                <p class="u-text u-text-1" style="padding-top:60px ; padding-bottom: 40px;">
+                    Thanks to these efforts, the industry begins to develop. “Now we have seen a lot of momentum from
+                    other governments; Brazil, Canada, India, New Zealand, South Korea and Australia are implementing
+                    laws against animal testing,” says MacneilBrown. “We see countries around the world moving in that
+                    direction, so the momentum is there. When an animal is tested, it does not leave this laboratory and
+                    is completely unnecessary. It is more expensive, less accurate, and not as efficient. Animal testing
+                    is not really required and we just need everyone to keep up with the new technology so that we can
+                    do cheaper, faster and more accurate tests. "Technological advances have brought alternatives to
+                    animal testing, including computational analysis, human patch testing, or laboratory skin. There is
+                    a growing number of alternative tests that mean products are still safe and companies can still
+                    innovate, and we want to make sure this continues and that regulators everywhere have access to
+                    these tests," says Thew. “And we know what consumers want. Consumers around the world are choosing
+                    cruelty-free options and urging decision makers to stop testing on animals. We are seeing more and
+                    more countries move, so now is the time for everyone to work together to end this once and for all.
+
+
+
+<br><br>
+                    
+
+                   10. https://www.toofaced.com/eye-makeup/eyeshadow-palettes/clover-palette/41035.html?gclid=CjwKCAi
+                    AnabTBRA6EiwAemvBd3m3hR_aVK88FM9_Cbtg_f_NXJI-p-X_Nnj7xDz-fZLFijynPncYdBoCxU8QAv D_BwE</p>
+            </div>
+
+    </body>
+
+
+    <!-- article 1 end -->
+    <!-- Footer -->
+    <div class="container-fluid1">
+
+        <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+            <!-- ombre div  -->
+            <div id="container-fluid1"></div>
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+                            <!-- Links -->
+
+                            <h5>
+                                <a href="#!" class="text-white" style="text-decoration: none;">About us</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./privacy.html" class="text-white" style="text-decoration: none;">Privacy
+                                    Policy</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./tc.html" class="text-white" style="text-decoration: none;">Terms &
+                                    Conditions</a>
+                            </h5>
+
+                            <h5>
+                                <a href="" class="text-white" style="text-decoration: none;">Contact</a>
+                            </h5>
+                        </div>
+                        <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for
+                                        our newsletter for
+                                        the latest news and insights on sustainability and climate change
+                                    </label>
+
+                                    <div class="col p-4"> <input type="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter email"></div>
+                                    <div class="col p-4"><button type="submit"
+                                            class="btn btn-secondary">Subscribe</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+</body>
+<!-- <script src="BlogJs/Blog1.js"></script> -->
+
+</html>

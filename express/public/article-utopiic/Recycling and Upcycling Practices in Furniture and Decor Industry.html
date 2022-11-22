@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="home2.css" media="screen">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Blog Page/css/main.css">
+
+    <style>
+        .top-right {
+            position: absolute;
+            background-color: white;
+            font-size: 1.5vh;
+            padding: 4px 7px 4px 7px;
+            /* top: 8px; */
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid;
+            box-shadow: 1px 1px 2px 1px #888888;
+            right: 0px;
+            /* color: black; */
+            /* box-shadow: 2px 2px red; */
+            /* text-shadow:1px 1px 2px rgb(17, 92, 232); */
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #817b7b;
+            z-index: 9;
+        }
+
+        #myPDF {
+            display: none;
+            width: 100%;
+            height: 975px;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: black;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <title>INSIGHTS</title>
+</head>
+
+<body>
+
+    <!-- form popup 1 -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container" name="myForm" id="report1" action="#">
+            <!--take data from the form in backend and  redirect to the pdf file according the id -->
+
+
+
+            <input type="text" placeholder="Enter Name" id="NameReport1" name="userName" required>
+
+
+            <input type="text" placeholder="Enter Mail" id="MailReport1" name="userMail" required>
+
+
+            <button type="submit" class="btn cancel" onclick="validate()">Submit</button>
+            <!--onclick="viewReport1()" -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- form popup end 1 -->
+    <!-- header div  -->
+    <header class="header-area">
+        <div class="header-container">
+
+            <!-- <div class="col" style="background-color: red;">sf</div> -->
+            <div class=" site-logo" d="logoid">
+                <a><img src="./images/Utopiic Registered logo-02.png" width="200vh">
+                </a>
+            </div>
+            <div class=" mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class=" site-nav-menu">
+                <ul class="primary-menu" style="padding-top: 1vh;">
+                    <li class="text-white">About us</li>
+                    <li class="text-white">Insights</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="container-fluid1"></div>
+    </header>
+    <!-- artile 1 -->
+
+    <body class="u-body u-xl-mode">
+        <header class="u-clearfix u-header u-header" id="sec-bafd">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <h1 class="u-text u-text-default u-text-1" style="padding-top:3.5% ;">Recycling and Upcycling Practices
+                    in Furniture and Decor Industry.</h1>
+        </header>
+        <section class="u-clearfix u-white u-section-1" id="carousel_fb95">
+            <div class="u-clearfix u-sheet u-sheet-1">
+                <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div
+                                class="u-container-style u-layout-cell u-left-cell u-similar-fill u-size-27 u-layout-cell-1">
+                                <div class="u-container-layout u-container-layout-1">
+                                    <img class="u-absolute-hcenter-xs u-expanded u-image u-image-1"
+                                        src="images/img_220222100230.jpg">
+                                </div>
+                            </div>
+                            <div
+                                class="u-container-style u-layout-cell u-right-cell u-similar-fill u-size-33 u-layout-cell-2">
+                                <div class="u-container-layout u-container-layout-2">
+                                    <p class="u-text u-text-1">&nbsp;Recycling has been one of the most important themes
+                                        in the world we live in today. Almost all the manufacturing sector is trying
+                                        very hard to meet the recycling norms in order to please their customers. Major
+                                        global brands like Amazon1 and Starbucks2, both of which are based in Seattle,
+                                        are in the news for incorporating more and more recycled resources into their
+                                        operations and to support sustainable initiatives. The people in the big
+                                        furniture firms have noticed this trend and have increased their share in
+                                        recycling by using recycled plastics, wood and metals while creating their
+                                        products. Upcycling and use of vintage pieces is very popular all over the world
+                                        and has been so for many years. Keeping this vision in their mind the furniture
+                                        industry is coming up with new and innovative ways to bring in more recycled and
+                                        reclaimed materials at the core of their mission. Keeping the illustrations of
+                                        upcycling the industry overall has realized that there is already an abundance
+                                        of usable materials and this is making the furniture companies create and manage
+                                        their very own circular economy.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="u-text u-text-2">In well developed regions like the European Union where policies are in place
+                    to make sure industries form a circular economy and hence creating recycled products becomes a
+                    criteria of utmost importance for European companies like Pentatonic.3 The current catalog of the
+                    company has a wide range of products like chairs, tables, pillows and other products from post
+                    consumer waste and are built in such a way that someday they can be recycled again. Apart from that
+                    many of their products are made by using recycled plastic, a material which the co-founders Jamie
+                    Hall and Joe Boedecker believe has a lot of untapped potential.
+
+
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-2"
+                    src="images/downloaded-plastic-bottle.jpg" alt="" data-image-width="960" data-image-height="640">
+            </div>
+        </section>
+        <section class="u-clearfix u-section-2" id="sec-53af">
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1" style="padding-top: 0% !important;">
+                <p class="u-text u-text-1"> One report says that almost 480 billion plastic bottles were purchased in
+                    the year 2017 itself and the cofounders of Pentatonic are making a point that they use this excess
+                    plastic in their raw materials. One of the best parts about this plastic is that it is pliable and
+                    flexible and hence the people at Pentatonic can use the polyethylene present in the plastic (PET) to
+                    make upholstery and seatings. They have also formed collaborations with waste management companies
+                    in Europe and Taiwan based international upcycling company Miniwizan, they are also focussing on
+                    transforming various other recyclable materials like glass from electronics into glassware, tables
+                    and hangers.4
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-3"
+                    src="images/downloaded-floor.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+            </div>
+
+
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1">
+                <p class="u-text u-text-1" style="padding-top:60px ;">While the example of Pentatonic is of a new and
+                    upcoming startup, Emeco, Hannover, Pennsylvania, is a good example of a firm that has been upcycling
+                    since a long time. The company has an excellent reputation of using salvaged aluminium since World
+                    War II. The full name of the company is Electrical Machine and Equipment Co. and they began
+                    operations by employing local sheetworkers to make chairs specifically for sailors and ships. Today,
+                    the company is still following its mission to make chairs that survive brutal seas but now catering
+                    restaurants, hotels and offices.5
+                    <br><br>
+                    1 https://sustainability.aboutamazon.com/environment/circular-economy/recycling
+                    <br>
+                    2 https://www.starbucks.in/responsibility/environment/recycling#:~:text=Recycling%20in%20Stores,wher
+                    e%20our%20stores%20are%20located.
+                    <br>
+                    3 https://www.dezeen.com/2018/03/22/pentatonic-snarkitecture-fractured-furniture-recycled-waste/
+                    <br>
+                    4
+                    http://breakthrough.unglobalcompact.org/briefs/miniwiz-taiwans-trash-business-arthur-huang-jarvis-liu/
+                    <br>
+                    5 https://www.emeco.net/support
+
+                    <br><br>
+
+
+                    The original process to make the chair hasn't changed at all in the past decades. It includes 77
+                    steps to make the chair which includes welding soft recycled aluminum, treating the metal to 960
+                    degree salt bath and baking the chairs before polishing them thrice by hand. The company claims that
+                    its chairs use processes which turn reclaimed materials into furniture products that are almost
+                    thrice as strong as chairs made from steel. In order to make their signature 111 Navy Chair the
+                    company makes use of truckloads of PET bales on a weekly basis that contain more than 20000 bottles.
+                    By following this philosophy they have managed to keep 21 million plastic bottles out of the
+                    landfills since 2010 and Emerco says it plans to increase this number. All the products from Emerco
+                    come with a buyback guarantee to upcycle the materials again.
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-4"
+                    src="images/downloaded-chairs.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+            </div>
+
+
+            <div class="u-clearfix u-sheet u-valign-top-lg ">
+                <p class="u-text u-text-1" style="padding-top:60px ; padding-bottom: 40px;"> Another company making
+                    strides in upcycling is Arhaus Furnitures6 from Cleveland which has various products in its
+                    collection that incorporate recycled materials. As a part of their business model Arhaus is sourcing
+                    recycled copper from Mexico as a part of its dining room furniture collection by creating sets that
+                    have been melted down and molded.7 The process begins with melting the metal itself then it is cured
+                    and wood fired and the tops are hand pounded multiple times before being waxed and shined. These
+                    copper tables are made in the region of Mexico where Monarch Butterflies annually migrate and to add
+                    this touch they emboss the table with the butterfly itself to signify the place. Arhaus furniture is
+                    also drawing inspiration from the outdoors and wild by using petrified wood to create innovative
+                    designs.
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-4"
+                    src="images/downloaded-ikea.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+            </div>
+            <div class="u-clearfix u-sheet u-valign-top-lg ">
+                <p class="u-text u-text-1" style="padding-top:60px ; padding-bottom: 40px;">Swedish Furniture giant Ikea
+                    is also investing a lot in sustainability domains and is not shying away from going for ambitious
+                    targets like a goal which they have set to reach 100 percent recycled materials by 2020 which was
+                    hampered by the Pandemic.8Ikea have also committed themselves to using organic cotton for their
+                    upholstery as the organic cotton is known to come from farmers that use less water, chemicals and
+                    pesticides. Their wood products use a wide range of recycled materials and they are also trying
+                    their best to phase out their existing oil based polystyrene in its flat packs and are replacing
+                    them with fully recyclable materials. In 2012, Ikea came out with its initiative called People and
+                    Planet Positivity Sustainability strategy which included several programs like mattress recycling
+                    program and they plan to include more fully recyclable products and inspired collections. With big
+                    companies like Ikea coming forward with such initiatives, it is bound to push more and more
+                    companies to follow suit and adopt new recycled products and related sustainable practices.
+<br><br>
+                    6 https://www.arhaus.com/landing-pages/green-initiative/
+                    <br><br>
+                    7 https://www.arhaus.com/furniture/dining-room-furniture/
+                    <br><br>
+                    8 https://about.ikea.com/en/sustainability/a-world-without-waste/renewable-and-recycled-materials 9
+                    <br><br>
+                    https://gbl-sc9u2-prd-cdn.azureedge.net/-/media/aboutikea/pdfs/people-and-planet-sustainability-strat
+                    egy/people-and-planet-positive-ikea-sustainability-strategy-august-2020.pdf?rev=3a3e9a12744b4705
+                    b9d1aa8be3b36197&hash=099EADD58A6B850BD522866B8E01F518
+                </p>
+
+            </div>
+
+    </body>
+
+
+    <!-- article 1 end -->
+    <!-- Footer -->
+    <div class="container-fluid1">
+
+        <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+            <!-- ombre div  -->
+            <div id="container-fluid1"></div>
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+                            <!-- Links -->
+
+                            <h5>
+                                <a href="#!" class="text-white" style="text-decoration: none;">About us</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./privacy.html" class="text-white" style="text-decoration: none;">Privacy
+                                    Policy</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./tc.html" class="text-white" style="text-decoration: none;">Terms &
+                                    Conditions</a>
+                            </h5>
+
+                            <h5>
+                                <a href="" class="text-white" style="text-decoration: none;">Contact</a>
+                            </h5>
+                        </div>
+                        <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for
+                                        our newsletter for
+                                        the latest news and insights on sustainability and climate change
+                                    </label>
+
+                                    <div class="col p-4"> <input type="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter email"></div>
+                                    <div class="col p-4"><button type="submit"
+                                            class="btn btn-secondary">Subscribe</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+</body>
+<!-- <script src="BlogJs/Blog1.js"></script> -->
+
+</html>

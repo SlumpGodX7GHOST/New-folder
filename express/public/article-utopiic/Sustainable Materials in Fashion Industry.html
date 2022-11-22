@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Home.css" media="screen">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Blog Page/css/main.css">
+
+    <style>
+        .top-right {
+            position: absolute;
+            background-color: white;
+            font-size: 1.5vh;
+            padding: 4px 7px 4px 7px;
+            /* top: 8px; */
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid;
+            box-shadow: 1px 1px 2px 1px #888888;
+            right: 0px;
+            /* color: black; */
+            /* box-shadow: 2px 2px red; */
+            /* text-shadow:1px 1px 2px rgb(17, 92, 232); */
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #817b7b;
+            z-index: 9;
+        }
+
+        #myPDF {
+            display: none;
+            width: 100%;
+            height: 975px;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: black;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <title>INSIGHTS</title>
+</head>
+
+<body>
+
+    <!-- form popup 1 -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container" name="myForm" id="report1" action="#">
+            <!--take data from the form in backend and  redirect to the pdf file according the id -->
+
+
+
+            <input type="text" placeholder="Enter Name" id="NameReport1" name="userName" required>
+
+
+            <input type="text" placeholder="Enter Mail" id="MailReport1" name="userMail" required>
+
+
+            <button type="submit" class="btn cancel" onclick="validate()">Submit</button>
+            <!--onclick="viewReport1()" -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- form popup end 1 -->
+    <!-- header div  -->
+    <header class="header-area">
+        <div class="header-container">
+
+            <!-- <div class="col" style="background-color: red;">sf</div> -->
+            <div class=" site-logo" d="logoid">
+                <a><img src="./images/Utopiic Registered logo-02.png" width="200vh">
+                </a>
+            </div>
+            <div class=" mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class=" site-nav-menu">
+                <ul class="primary-menu" style="padding-top: 1vh;">
+                    <li class="text-white">About us</li>
+                    <li class="text-white">Insights</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="container-fluid1"></div>
+    </header>
+    <!-- artile 1 -->
+
+    <body class="u-body u-xl-mode">
+        <header class="u-clearfix u-header u-header" id="sec-bafd">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <h1 class="u-text u-text-default u-text-1" style="padding-top:3.5% ;">Sustainable Materials in Fashion
+                    Industry</h1>
+        </header>
+
+        <section class="u-clearfix u-white u-section-1" id="carousel_fb95">
+
+            <div class="u-clearfix u-sheet u-sheet" style="padding-bottom: 8% ;">
+
+                <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div
+                                class="u-container-style u-layout-cell u-left-cell u-similar-fill u-size-27 u-layout-cell-1">
+
+                                <div class="u-container-layout u-container-layout-1">
+                                    <img class="u-absolute-hcenter-xs u-expanded u-image u-image-1"
+                                        src="images/img_211011074325.jpg">
+                                </div>
+                            </div>
+                            <div
+                                class="u-container-style u-layout-cell u-right-cell u-similar-fill u-size-33 u-layout-cell-2">
+                                <div class="u-container-layout u-valign-middle-md u-valign-top-xs u-container-layout-2">
+                                    <p class="u-text u-text-1">&nbsp;Materials that we use in the making of our textiles
+                                        play an important role in the output and how sustainable actually the product
+                                        is. There are various ways in which we can make our fabrics more sustainable
+                                        like recycling, up-cycling, sourcing locally, etc. Our present-day lifestyle
+                                        consumption of fashion as we know it like Fast Fashion and the excessive use of
+                                        cotton has an adverse effect on the environment.
+                                        <br><br>
+                                        Sustainable Materials are defined as something that is made from natural
+                                        products and the processing it to the final product is less resource-intensive.
+                                        There are various types of materials that are available in the market in the
+                                        present day which are deemed as sustainable and we shall be dwelling into each
+                                        one. For the purpose of this article, we shall take six sustainable materials
+                                        and dive deeper into how each is produced and how each of them helps save the
+                                        environment.<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="u-text u-text-2">We begin with a type of leather that is made from a fruit that we all
+                    recognize. The leather in question is Pineapple Leather or better known as Pinatex. In recent years
+                    there has been a trend in the industry to make leather from plants and fruits from waste materials.
+                    Pinatex is a leather made from the tropical fruit Pineapple leaves from the tropical island of the
+                    Philippines. The best part about Pinatex is that it is way more sustainable because it does not
+                    cause harm to animals and hence can be termed cruelty-free and vegan. The tanning of leather
+                    releases a lot of toxic chemicals into the water bodies and is a major cause of concern, hence using
+                    natural materials like Pineapple conserves water and no hazardous waste is disposed of in the water.
+                    It also reduces the Greenhouse Gases as well as the livestock that give us most of our leather and
+                    have a huge footprint of methane. Apart from these benefits the leaves and other waste that is
+                    leftover are recycled and used to fertilize the plants or could be used as biomass. A hotel suite in
+                    London is famous for using all the upholstery from Pintex and have branded itself as the world’s
+                    first Vegan Suite.1
+
+<br>
+<br>
+
+                    We will now have a look into the material that is way more scientific and futuristic. This material
+                    known as Squid’s In is a biomimicry2 product that is nothing but looking into the natural world for
+                    inspiration. Textile designers are now finding new ways to look into new ways to be sustainable and
+                    have found that processes that take place in nature more often than not use less energy to get the
+                    desired results. The best example of this can be that there are only five polymers or long-chain
+                    molecules in the natural world while we humans manufacture more than 350. Only very recently
+                    scientists have discovered that a protein present in squid’s ring teeth in their tentacles can be
+                    engineered in labs for various uses. Fashion designers are now incorporating this protein as a
+                    coating on fiber which makes it more durable. This protein is also known to have healing properties.
+                    It is being used by garment makers to make their products more recyclable and biodegradable.
+
+
+
+                    <br><br>
+                    Wool is another natural fiber that is known to be sustainable. Animal welfare standards are a
+                    growing concern which makes some wool farms a major source of protest by many activist organizations
+                    like PETA, which argue that anything using other animals is unethical. But
+                    <br><br>
+
+
+                    Some farms do employ ethical practices and wool itself is known to be a sustainable fabric as it is
+                    renewable, durable, and biodegradable. There are many farms with sheep in the west3 that have
+                    engineered techniques that help in capturing carbon from the atmosphere and hence reducing the
+                    impact on the environment itself. Wool is well-known for its strength and resilience as it's both
+                    flames resistant and waterproof which means that it will stand the test of time which would reduce
+                    our reliance on Fast Fashion alternatives.
+                    <br>
+                    Linen is also considered to be a sustainable fabric as it is made from fibers of the Flax Plant.4
+                    Linen has been known by mankind for many centuries as we have evidence of ancient Egyptians using it
+                    for its durability and ability to absorb water and keep people cool. Nowadays the reach of Linen is
+                    far-reaching and it is now being grown in all the geographically suitable areas like in the European
+                    Union (almost three-quarters of flax is grown in the EU). It is the best fabric fiber as there is no
+                    need for pesticides and fertilizers and it requires way less water than cotton does and is way
+                    better for soil health. The fabric has the best tensile strength and doesn't need to be replaced for
+                    years and it also dries way quicker than cotton.
+                    <br>
+                    Better Cotton is also something that has been discovered only recently. Rather than using a
+                    different kind of fiber we use different production methods to make the cotton more sustainable.
+                    Cotton Farming is very resource-intensive and uses pesticides and chemicals as well as gallons of
+                    water in order to produce just one product. This is where the better cotton initiative comes in
+                    where they support farmers in the world to be more conscious about water, soil health, and natural
+                    habitation with certain standards. As of now, the Better Cotton Initiative covers 12.5% of the
+                    market. If we are to find the impact of a single piece of garment is by looking out for retailers
+                    that are certified organic cotton by GOTS (Global Organic Textile Standard) Label.5
+                    <br>
+                    Now in the end we shall look into a fabric that is very recent. There has been a growing awareness
+                    amongst the general public that when we wash our clothes which are made from man-made fibers they
+                    tend to release microfibers into the waterways. Hence there has been a growing need for new fabrics
+                    that are natural. Lyocell is one such material that is made from cellulose from wood pulp. It is
+                    being solely manufactured under the trade name Tencel which is owned by an Austrian company. The
+                    Tencel fabrics hence produced are biodegradable and compostable the production process itself has a
+                    very low carbon footprint. The wastewater from production is reusable as no chemicals are used.
+                    <br>
+                    As illustrated in this article there are various new ways and fabrics that are there in the fashion
+                    industry. This is making fashion more sustainable and people more environmentally educated. Apart
+                    from the six fabrics mentioned above, there are other fabrics that are popular like Hemp which has a
+                    fairly low environmental impact. Designers have also been known to use cork, bamboo, and even
+                    seaweed in order to make their products more sustainable and ethical.
+                    <br><br>
+
+
+                   <ol>
+                  <li>  https://www.standard.co.uk/lifestyle/the-worlds-first-vegan-hotel-suite-has-come-to-london-a4045741.html</li>
+
+                    <li> https://www.ted.com/talks/janine_benyus_biomimicry_in_action/transcript?language=en</li>
+
+
+                        <li>  https://www.fastcompany.com/40493770/this-climate-beneficial-wool-hat-comes-from-carbon-positive</li>
+                    sheep
+
+                    <li>  https://www.vam.ac.uk/articles/linen-the-original-sustainable-material</li>
+
+                        <li>  https://bettercotton.org/   </li> </ol>
+                </p>
+            </div>
+
+    </body>
+
+    <!-- article 1 end -->
+    <!-- Footer -->
+    <div class="container-fluid1">
+
+        <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+            <!-- ombre div  -->
+            <div id="container-fluid1"></div>
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+                            <!-- Links -->
+
+                            <h5>
+                                <a href="#!" class="text-white" style="text-decoration: none;">About us</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./privacy.html" class="text-white" style="text-decoration: none;">Privacy
+                                    Policy</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./tc.html" class="text-white" style="text-decoration: none;">Terms &
+                                    Conditions</a>
+                            </h5>
+
+                            <h5>
+                                <a href="" class="text-white" style="text-decoration: none;">Contact</a>
+                            </h5>
+                        </div>
+                        <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for
+                                        our newsletter for
+                                        the latest news and insights on sustainability and climate change
+                                    </label>
+
+                                    <div class="col p-4"> <input type="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter email"></div>
+                                    <div class="col p-4"><button type="submit"
+                                            class="btn btn-secondary">Subscribe</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+</body>
+<!-- <script src="BlogJs/Blog1.js"></script> -->
+
+</html>

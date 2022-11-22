@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="home2.css" media="screen">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Blog Page/css/main.css">
+
+    <style>
+        .top-right {
+            position: absolute;
+            background-color: white;
+            font-size: 1.5vh;
+            padding: 4px 7px 4px 7px;
+            /* top: 8px; */
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid;
+            box-shadow: 1px 1px 2px 1px #888888;
+            right: 0px;
+            /* color: black; */
+            /* box-shadow: 2px 2px red; */
+            /* text-shadow:1px 1px 2px rgb(17, 92, 232); */
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #817b7b;
+            z-index: 9;
+        }
+
+        #myPDF {
+            display: none;
+            width: 100%;
+            height: 975px;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: black;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <title>INSIGHTS</title>
+</head>
+
+<body>
+
+    <!-- form popup 1 -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container" name="myForm" id="report1" action="#">
+            <!--take data from the form in backend and  redirect to the pdf file according the id -->
+
+
+
+            <input type="text" placeholder="Enter Name" id="NameReport1" name="userName" required>
+
+
+            <input type="text" placeholder="Enter Mail" id="MailReport1" name="userMail" required>
+
+
+            <button type="submit" class="btn cancel" onclick="validate()">Submit</button>
+            <!--onclick="viewReport1()" -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- form popup end 1 -->
+    <!-- header div  -->
+    <header class="header-area">
+        <div class="header-container">
+
+            <!-- <div class="col" style="background-color: red;">sf</div> -->
+            <div class=" site-logo" d="logoid">
+                <a><img src="./images/Utopiic Registered logo-02.png" width="200vh">
+                </a>
+            </div>
+            <div class=" mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class=" site-nav-menu">
+                <ul class="primary-menu" style="padding-top: 1vh;">
+                    <li class="text-white">About us</li>
+                    <li class="text-white">Insights</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="container-fluid1"></div>
+    </header>
+    <!-- artile 1 -->
+
+    <body class="u-body u-xl-mode">
+        <header class="u-clearfix u-header u-header" id="sec-bafd">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <h1 class="u-text u-text-default u-text-1" style="padding-top:3.5% ;">Environmental impacts of Textiles
+                </h1>
+        </header>
+        <section class="u-clearfix u-white u-section-1" id="carousel_fb95">
+            <div class="u-clearfix u-sheet u-sheet-1">
+                <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div
+                                class="u-container-style u-layout-cell u-left-cell u-similar-fill u-size-27 u-layout-cell-1">
+                                <div class="u-container-layout u-container-layout-1">
+                                    <img class="u-absolute-hcenter-xs u-expanded u-image u-image-1"
+                                        src="images/img_220128083011.jpg">
+                                </div>
+                            </div>
+                            <div
+                                class="u-container-style u-layout-cell u-right-cell u-similar-fill u-size-33 u-layout-cell-2">
+                                <div class="u-container-layout u-container-layout-2">
+                                    <p class="u-text u-text-1">&nbsp;The fashion industry is one of the major polluting
+                                        industries in the world. It produces a huge amount of carbon emission and also
+                                        pollutes oceans with micro plastics. The production and distribution of the
+                                        crops, fibres and garments used in fashion all contribute to pollution including
+                                        air, water and soil.
+                                        <br><br>
+                                        The major environmental effects of the textile industry are the discharge of
+                                        high amounts of chemical loads resulting from the high consumption of water and
+                                        harmful chemicals used in this sector and the associated water pollution, high
+                                        energy consumption in production processes and related air emissions, problems
+                                        with packaging and solid waste production and the formation of unpleasant odors
+                                        which are formed by the bleaching, dyeing and printing processes that can arise
+                                        from the wastewater treatment plant.
+
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="u-text u-text-2"> The fashion industry has a disastrous impact. In fact, it is the second
+                    largest polluter in the world, just after the oil industry and the environmental damage is
+                    increasing as the industry grows.
+                    <br><br>
+                    Let’s see some of the global environmental issues in the textile Industry-
+                    <br><br>
+                <h4> WATER POLLUTION- MICROFIBRES IN OUR OCEANS </h4>
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-2"
+                    src="images/downloaded-rassi.jpg" alt="" data-image-width="960" data-image-height="640">
+            </div>
+        </section>
+        <section class="u-clearfix u-section-2" id="sec-53af">
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1" style="padding-top: 0% !important;">
+                <p class="u-text u-text-1">The textile industry is the second greatest polluter of the local freshwater
+                    in the world. Over production of materials especially using synthetic fibres is one of the major
+                    factors contributing to the industrial pollution.
+                    <br><br>
+                    Most of the fibres that are used in the garment sector are polyester which releases 2 to 3 times
+                    more carbon emissions than natural fibres like organic cotton.
+                    <br><br>
+                    Textile production is estimated to be responsible for about 20% of global clean water pollution from
+                    dyeing and finishing products. Washing synthetics releases an estimated 0.5 million tons of
+                    microfibres into the ocean a year.
+                    <br><br>
+                    In most of the countries in which garments are produced, untreated toxic wastewaters from textile
+                    factories are dumped directly into the rivers.
+                    <br><br>
+                    Wastewater contains toxic substances such as lead, mercury, and arsenic, among others. These are
+                    extremely harmful for aquatic life and the health of the millions of people living by those rivers
+                    banks. The contamination also reaches the sea and eventually spreads around the globe.
+                    <br><br>
+                    Another major source of water contamination is the use of fertilizers for cotton production which
+                    heavily polluted runoff waters.
+                    <br><br>
+                    Every time we wash a synthetic garment (polyester,nylon, etc), about 1,900 individual microfibres
+                    are released into the water, making their way into our oceans. Scientists have discovered that small
+                    aquatic organisms ingest those microfibres. These are then eaten by small fish which are later eaten
+                    by bigger fish, introducing plastic in our food chain.
+                    <br><br>
+                    Laundering synthetic clothes accounts for 35% of primary microplastics released into the
+                    environment. A single laundry load of polyester clothes can discharge 700,000 micro-plastic fibres
+                    that can end up in the food chain.
+                    <br><br>
+                    FRESH WATER CONSUMPTION
+                    <br>
+                    The fashion industry is a major water consumer.
+                    <br>
+                    It takes a lot of water to produce textile, plus land to grow cotton and other fibres. It is
+                    estimated that the global textile and clothing industry used 79 billion cubic metres of water in
+                    2015, while the needs of the EU's whole economy amounted to 266 billion cubic metres in 2017. To
+                    make a single cotton t-shirt, 2,700 litres of fresh water are required according to estimates which
+                    is enough to meet one person’s drinking needs for 2.5 years.
+
+                    <br>
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-3"
+                    src="images/default-textiles.png" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+            </div>
+
+
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1">
+                <p class="u-text u-text-1" style="padding-top:60px ;">Huge quantity of fresh water is used for the
+                    dyeing and finishing process for all of our clothes. As reference, it can take up to 200 tons of
+                    fresh water per ton of dyed fabric.
+                    <br><br>
+                    Also, cotton needs A LOT of water to grow (and heat), but is usually cultivated in warm and dry
+                    areas. Up to 20,000 liters of water is needed to produce just 1kg of cotton. This generates
+                    tremendous pressure on this precious resource, already scarce, and has dramatic ecological
+                    consequences such as the desertification
+                    <br><br>
+                    of the Aral Sea, where cotton production has entirely drained the water (see pictures below).
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-4"
+                    src="images/downloaded-map.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+            </div>
+
+
+            <div class="u-clearfix u-sheet u-valign-top-lg ">
+                <p class="u-text u-text-1" style="padding-top:60px ; padding-bottom: 40px;"> “ 85 % of the daily water
+                    needs of the entire population of India would be covered by the water used to grow cotton in the
+                    country. 100 million people in India do not have access to drinking water.”— Stephen Leahy, The
+                    Guardian
+                    <br>
+                <h4> ACCUMULATION OF WASTE</h4>
+                <br>
+                In today’s world, waste is at the heart of fashion! 95% of all textiles having the potential to be
+                reused or recycled are thrown away in the landfills.
+                </p>
+
+            </div>
+
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1">
+
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-4"
+                    src="images/default-waste.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+            </div>
+
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1">
+                <p class="u-text u-text-1" style="padding-top:60px ;">It occurs all along the supply chain, throughout
+                    consumer use, right up to the end-of-use disposal.
+                    <br><br>
+                    This physical journey of waste is the central tenet of ‘being in or out of fashion’ embedding the
+                    notion that it’s acceptable to discard a garment regardless of whether it is still functionally
+                    useful.
+                    <br><br>
+                    We like buying more variety of Apparel so as to look adorable or to fill the wardrobe but end up in
+                    using few. Of course, as the consumption level is increasing, the production level definitely
+                    increases and those clothes contribute to resource pollution and waste accumulation due to the fact
+                    that most of these items will one day be thrown out.
+                    <br><br>
+                    Clothing has clearly become disposable. As a result, we generate more and more textile waste. A
+                    family in the western world throws away an average of 30 kg of clothing each year. Only 15% is
+                    recycled or donated, and the rest goes directly to the landfill or is incinerated.
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-4"
+                    src="images/downloaded-50.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+            </div>
+
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1">
+                <p class="u-text u-text-1" style="padding-top:60px ;">People are consuming more than they need. They get
+                    cheaper prices and the companies producing these cheap items are making profit and producing
+                    clothing in surplus. This creates a trend called fast fashion. It enables speed in the design,
+                    creation and marketing of clothing fashions that emphasises making fashion trends quickly and
+                    cheaply available to consumers. This fast fashion is leading to a greater impact on society as well
+                    as the environment.
+                    <br><br>
+                    Synthetic fibres, such as polyester, are plastic fibres, therefore non-biodegradable and can take up
+                    to 200 years to decompose. Synthetic fibres are used in 72% of our clothing.
+                    <br><br>
+                    Also, The Textile production requires significant amounts of chemicals, water, energy, and other
+                    natural resources and when consumers throw away clothing in the garbage, not only does it waste
+                    money and resources, but it can take 200+ years for the materials to decompose in a landfill and
+                    during the decomposition process, textiles generate greenhouse methane gas and leach toxic chemicals
+                    and dyes into the groundwater and our soil. Given the growth in global population, equivalent of
+                    almost three planets could be required to provide the natural resources needed to sustain current
+                    lifestyles.
+
+
+                    <br><br><br>
+
+                    FASHION AND TOXIC CLOTHING
+                    <br><br>
+                    <br>
+                    As the fashion industry moves to become more transparent and reduce its environmental footprint, it
+                    must tackle the chemicals in clothing that are making fashion toxic.
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-4"
+                    src="images/downloaded-sky.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+            </div>
+
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1">
+                <p class="u-text u-text-1" style="padding-top:60px ;"> Chemicals are one of the main components in our
+                    clothes.
+                    <br>
+                    Chemicals are used in every part of the textile production for making fibres, bleaching and dyeing
+                    fabrics, etc… When they arrive in the shops, our clothes still contain a lot of chemicals, even
+                    clothes made of "100% natural" fiber. Our skin is our body's largest organ and absorbs anything we
+                    put on it, including chemicals in our clothes. These can present a real danger to our health.
+                    <br><br>
+                    They are used during fiber production, dyeing, bleaching, and wet processing of each of our
+                    garments. The heavy use of chemicals in cotton farming is causing diseases and premature death among
+                    cotton farmers, along with massive freshwater and ocean water pollution and soil degradation.
+                    <br><br>
+                    It is estimated over 8000 synthetic chemicals are used in the fashion manufacturing process, this
+                    includes carcinogens and hormone disruptors. Carcinogens are substances that are linked to the
+                    formation of cancerous cells. Other harmful materials used include flame retardants, AZO dyes,
+                    chromium and formaldehydes. For the person that wears the clothes, these synthetic chemicals can
+                    cause skin irritation and aggravate any allergies.
+                    <br><br>
+                    But, it’s not just the consumer who is affected by the chemicals used in clothing. To understand the
+                    impact of the toxicity in the fashion industry, we need to consider the workers across the supply
+                    chain who are responsible for treating, dying and producing our garments. These workers are often
+                    exposed to hazardous substances without adequate health and safety protection.
+                    <br><br>
+                    To avoid chemicals in our clothing-
+                    <br><br>
+                    -Opt for organic materials like linen, sustainably farmed cotton and hemp that are coloured with
+                    natural dye. You could also purchase items that are made using innovative circular biomaterials and
+                    vegan leather alternatives.
+                    <br><br>
+                    -Keep your eyes out for certifications. If an item of clothing has been marked by GOTS and STANDARD
+                    100 by OEKO-TEX®, it means textiles are tested for harmful substances.
+                    <br><br>
+                    -Shop with chemical free clothing brands who are dedicated to designing safe alternatives for
+                    wearers and workers.
+                    <br><br>
+                    -Start adopting smart sustainable laundry habits. Wash before you wear and use filtering tools to
+                    catch any harmful substances that could enter the water.
+                    <br><br>
+                <h4> CLIMATE CHANGE</h4>
+                <br><br>
+                At the forefront of environmental problems are greenhouse gas emissions that pose a threat to all
+                living things due to the effect on climate. Burning fossil fuels significantly increases the amount
+                of carbon dioxide emissions, which is the primary source of the greenhouse effect.
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-4"
+                    src="images/downloaded-carpenter.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+            </div>
+
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1">
+                <p class="u-text u-text-1" style="padding-top:60px ;">In textile enterprises, sulfur and nitrogen oxides
+                    usually emerge due to the boilers. These oxides disrupt the pH balance of habitats, damaging living
+                    organisms and also cause degradation of metal artifacts. The other important air emission sources in
+                    textile processing are anti-crease finishing, drying, printing, dyeing and wastewater treatment
+                    facilities. These processes dissipate hydrocarbons which are released from mineral oils during
+                    drying and curing processes which are performed at high temperature, acids, formaldehyde, softeners,
+                    and other evaporating compounds. Remnants from the fiber preparation process sometimes can cause
+                    emissions during thermal fixation.
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-4"
+                    src="images/default-chimni.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;"><br>
+                <p class="u-text u-text-1">The apparel industry accounts for 10% of global carbon emissions. Total
+                    greenhouse gas emissions related to textile production is equal to 1.2 billion tons annually.
+
+
+<br><br><br>
+
+
+
+                    Synthetic fibres (polyester, acrylic, nylon, etc.), used in the majority of our clothes, are made
+                    from fossil fuel, making production much more energy-intensive than with natural fibres.
+                    <br><br>
+                    Most of our clothes are produced in China, Bangladesh, or India, countries essentially powered by
+                    coal. This is the dirtiest type of energy in terms of carbon emissions. For this reason, all of the
+                    stakeholders in this industry must gather to support the maintenance of sustainability.
+                    <br><br>
+                  <h4>  CONCLUSION </h4>
+                    <br><br>
+                    The lifelong ecological impacts of textile products are affected by the raw materials, their origin
+                    and the durability of the product, in addition to the production methods. Increased textile
+                    consumption due to improvements in the world population and improvements in living standards along
+                    with the environmental effects of the textile, require the improvement of the environmental
+                    performance of this industry. In this sense, the concept of environmental sustainability has become
+                    a matter of concern in the textile sector.</p>
+            </div>
+
+    </body>
+
+
+    <!-- article 1 end -->
+    <!-- Footer -->
+    <div class="container-fluid1">
+
+        <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+            <!-- ombre div  -->
+            <div id="container-fluid1"></div>
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+                            <!-- Links -->
+
+                            <h5>
+                                <a href="#!" class="text-white" style="text-decoration: none;">About us</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./privacy.html" class="text-white" style="text-decoration: none;">Privacy
+                                    Policy</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./tc.html" class="text-white" style="text-decoration: none;">Terms &
+                                    Conditions</a>
+                            </h5>
+
+                            <h5>
+                                <a href="" class="text-white" style="text-decoration: none;">Contact</a>
+                            </h5>
+                        </div>
+                        <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for
+                                        our newsletter for
+                                        the latest news and insights on sustainability and climate change
+                                    </label>
+
+                                    <div class="col p-4"> <input type="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter email"></div>
+                                    <div class="col p-4"><button type="submit"
+                                            class="btn btn-secondary">Subscribe</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+</body>
+<!-- <script src="BlogJs/Blog1.js"></script> -->
+
+</html>

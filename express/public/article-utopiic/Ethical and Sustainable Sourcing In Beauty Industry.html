@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="home2.css" media="screen">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Blog Page/css/main.css">
+
+    <style>
+        .top-right {
+            position: absolute;
+            background-color: white;
+            font-size: 1.5vh;
+            padding: 4px 7px 4px 7px;
+            /* top: 8px; */
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid;
+            box-shadow: 1px 1px 2px 1px #888888;
+            right: 0px;
+            /* color: black; */
+            /* box-shadow: 2px 2px red; */
+            /* text-shadow:1px 1px 2px rgb(17, 92, 232); */
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #817b7b;
+            z-index: 9;
+        }
+
+        #myPDF {
+            display: none;
+            width: 100%;
+            height: 975px;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: black;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <title>INSIGHTS</title>
+</head>
+
+<body>
+
+    <!-- form popup 1 -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container" name="myForm" id="report1" action="#">
+            <!--take data from the form in backend and  redirect to the pdf file according the id -->
+
+
+
+            <input type="text" placeholder="Enter Name" id="NameReport1" name="userName" required>
+
+
+            <input type="text" placeholder="Enter Mail" id="MailReport1" name="userMail" required>
+
+
+            <button type="submit" class="btn cancel" onclick="validate()">Submit</button>
+            <!--onclick="viewReport1()" -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- form popup end 1 -->
+    <!-- header div  -->
+    <header class="header-area">
+        <div class="header-container">
+
+            <!-- <div class="col" style="background-color: red;">sf</div> -->
+            <div class=" site-logo" d="logoid">
+                <a><img src="./images/Utopiic Registered logo-02.png" width="200vh">
+                </a>
+            </div>
+            <div class=" mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class=" site-nav-menu">
+                <ul class="primary-menu" style="padding-top: 1vh;">
+                    <li class="text-white">About us</li>
+                    <li class="text-white">Insights</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="container-fluid1"></div>
+    </header>
+    <!-- artile 1 -->
+
+    <body class="u-body u-xl-mode">
+        <header class="u-clearfix u-header u-header" id="sec-bafd">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <h1 class="u-text u-text-default u-text-1" style="padding-top:3.5% ;">Ethical and Sustainable Sourcing In Beauty Industry</h1>
+        </header>
+        <section class="u-clearfix u-white u-section-1" id="carousel_fb95">
+            <div class="u-clearfix u-sheet u-sheet-1">
+                <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div
+                                class="u-container-style u-layout-cell u-left-cell u-similar-fill u-size-27 u-layout-cell-1">
+                                <div class="u-container-layout u-container-layout-1">
+                                    <img class="u-absolute-hcenter-xs u-expanded u-image u-image-1"
+                                        src="images/img_220111113916.jpg">
+                                </div>
+                            </div>
+                            <div
+                                class="u-container-style u-layout-cell u-right-cell u-similar-fill u-size-33 u-layout-cell-2">
+                                <div class="u-container-layout u-container-layout-2">
+                                    <p class="u-text u-text-1">&nbsp;Beauty and personal care are a US$465 billion
+                                        industry globally and global skin care alone is a US$111 billion market, of BPC
+                                        sales. The global organic personal care market is growing at an annual rate of
+                                        almost 10 percent. According to Zero Waste Week, more than 120 billion units of
+                                        packaging are produced every year by the cosmetics industry, contributing to a
+                                        loss of 18 million acres of forest annually.
+                                        <br><br>
+                                        The high adoption of herbal products has led to growth of the segment at 15%
+                                        annually, on the back of the fact that people are becoming more aware of
+                                        possible side effects on skin by constant use of chemical formulations-based
+                                        cosmetics.
+                                        <br>
+                                        As the industry has grown, it has also struggled with a variety of ethical
+                                        issues.
+
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="u-text u-text-2"> So, why is the Beauty Industry not Sustainable, Ethical or Responsible?
+                    <br>
+                    The beauty industry has been criticized for practices surrounding: false claims and misleading
+                    advertisements, the unethical sourcing of ingredients, child labor, the use of harmful ingredients,
+                    animal testing, and excessive packaging. Some of these issues are more publicized than others,
+                    leading to unequal awareness of all problems.
+                    <br>
+                    Rising ethical consumerism is compelling global cosmetic brands to work towards sustainable
+                    development. They are expected to ensure that raw materials they are sourcing for cosmetic products
+                    are sourced in responsible ways and workers involved in the process are paid well.
+                    <br><br>
+
+
+
+                <h4> The issues that crop up in this industry:</h4>
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-2"
+                    src="images/downloaded-brown.jpg" alt="" data-image-width="960" data-image-height="640">
+            </div>
+        </section>
+        <section class="u-clearfix u-section-2" id="sec-53af">
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1" style="padding-top: 0% !important;">
+                <p class="u-text u-text-1">• The controversial sourcing of Mica – Child Labor, the problem with mica
+                    <br><br>
+                    a. 90% of mica mines are in Jharkhand and Bihar. Children as young as 5 are still toiling away in
+                    these mines, breathing in toxins daily. They allegedly employ 20,000 children and even now, supply
+                    most of the mica used in our beauty product.
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-3"
+                    src="images/downloaded-girl.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+            </div>
+
+
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1">
+                <p class="u-text u-text-1" style="padding-top:60px ;">• Toxic Chemicals used as Ingredients in Cosmetics
+                    and Toiletries
+                    <br><br>
+                    a. There are thousands of ingredients used in personal care products, many of them have negative
+                    environmental impacts and health effects ranging from skin irritation to carcinogenicity.
+                    <br><br>
+                    b. Parabens, phthalates and triclosan have been selected by Ethical Consumer as important indicators
+                    for their own toxics rating.
+                    <br><br>
+                    • Animal Testing in cosmetics
+                    <br>
+                    a. Almost all the ingredients that go into cosmetics have been tested on animals at some point, even
+                    water! For decades, animals have been used to test the toxicity of products for humans and the
+                    impact that chemicals will have on the environment.
+                    <br><br>
+                    b. 80% of the world allows cosmetics to be tested on animals. These tests oftentimes result in
+                    harmful allergic reactions that cause considerable pain and suffering for the animals.
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-4"
+                    src="images/downloaded-drop.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+            </div>
+
+
+            <div class="u-clearfix u-sheet u-valign-top-lg ">
+                <p class="u-text u-text-1" style="padding-top:60px ; padding-bottom: 40px;"> • Palm oil and cosmetics
+                    <br><br>
+                    a. There are currently over 200 versions of palm oil derivatives living in shampoos, soaps,
+                    lipsticks, and lotions. In order to meet this demand, the palm oil industry regularly cuts down
+                    rainforests to expand their plantations.
+                    <br><br>
+                    Example: In Malaysian Borneo, palm oil production has accounted for 57–69% of deforestation from
+                    1972 to 2015, destroying the species-rich rainforests in the process. This has not only led to 99%
+                    less tree diversity compared to natural forests but has also devastated the wildlife within the
+                    region.
+                    <br>
+
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-4"
+                    src="images/downloaded-gel.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+            </div>
+
+            <div class="u-clearfix u-sheet u-valign-top-lg ">
+                <p class="u-text u-text-1" style="padding-top:60px ; padding-bottom: 40px;"> • Microplastics in
+                    Cosmetics
+                    <br><br>
+                    a. Poorly biodegradable liquid polymers such as acrylates copolymer or carbomer are also prevalent
+                    and found everywhere, from sun protection to nail polishes and all kinds of hairstyling products,
+                    and yet, they go unnoticed by the public and largely ignored by the media or regulatory bodies. In
+                    contrast to solid microplastic or microbead particles, they come in different forms: liquid, wax, or
+                    gel.
+
+
+
+
+                <h4> Can the Beauty Industry be Sustainable?</h4>
+                <br>
+                Despite its massive presence on the global stage and rapid growth, the beauty industry can be more
+                sustainable so long as brands take the necessary steps.
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-4"
+                    src="images/default-stamp.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+                <p class="u-text u-test-1">
+                    <br> <br>Certification Labels:<br>
+
+                    Labels/Certifications are huge in the clean beauty industry: they come in the form of claims,
+                    badges, and seals. We want to know how good it is for our health, for the environment, and for
+                    animals. In other words, prioritizing cruelty-free, sustainable, and toxin free options is our
+                    number one priority. Beauty companies are using certifications to be more ethical and responsible
+                    like People for the Ethical Treatment of Animals (PETA), Vegan, USDA Certified Organic, NSF
+                    Certified Organic, Biodynamic® / Demet er®, COSMOS/Ecocert, Rainforest Alliance.
+                    <br><br><br>
+
+
+
+
+                    Sourcing:<br>
+
+                    A more local production can contribute to more sustainable and potentially shorter supply chains, as
+                    well as to a more personal, authentic image of the brand. Through ethical sourcing collaborations,
+                    these brands support the social and economic development of such communities while ensuring that the
+                    sourcing upon natural resources from certain plants and flowers is done in an ethical and
+                    sustainable manner.
+
+                    <br><br><br>
+
+
+
+                    Ecological Ingredients:
+                    <br>
+                    By using bio-beauty products, you’ll avoid the damages and protect the ecosystem. The ingredients of
+                    organic products have been grown without the use of pesticides or harmful fertilizers. So, you’ll
+                    protect biodiversity and promote organic farming. Beauty brands are more focusing on cruelty-free,
+                    vegan and sustainable products which will be safe for people and the planet.
+
+
+                    <br><br><br>
+
+                    Transparency:
+                    <br>
+                    There is a huge need for transparency in the beauty industry, a demand for information about
+                    ingredients, their origins, manufacturing processes. The beauty industry is suffering from a supply
+                    chain problem. The inclusion of numerous middlemen when procuring ingredients makes it hard to trace
+                    the exact origins of our beauty ingredients. Fortunately, supply chain management is one of the most
+                    viable and promising applications of blockchain technology.</p> <br> <br>
+            </div>
+
+    </body>
+
+
+    <!-- article 1 end -->
+    <!-- Footer -->
+    <div class="container-fluid1">
+
+        <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+            <!-- ombre div  -->
+            <div id="container-fluid1"></div>
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+                            <!-- Links -->
+
+                            <h5>
+                                <a href="#!" class="text-white" style="text-decoration: none;">About us</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./privacy.html" class="text-white" style="text-decoration: none;">Privacy
+                                    Policy</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./tc.html" class="text-white" style="text-decoration: none;">Terms &
+                                    Conditions</a>
+                            </h5>
+
+                            <h5>
+                                <a href="" class="text-white" style="text-decoration: none;">Contact</a>
+                            </h5>
+                        </div>
+                        <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for
+                                        our newsletter for
+                                        the latest news and insights on sustainability and climate change
+                                    </label>
+
+                                    <div class="col p-4"> <input type="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter email"></div>
+                                    <div class="col p-4"><button type="submit"
+                                            class="btn btn-secondary">Subscribe</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+</body>
+<!-- <script src="BlogJs/Blog1.js"></script> -->
+
+</html>

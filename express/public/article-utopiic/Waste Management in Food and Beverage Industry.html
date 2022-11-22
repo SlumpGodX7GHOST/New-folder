@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="home2.css" media="screen">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Blog Page/css/main.css">
+
+    <style>
+        .top-right {
+            position: absolute;
+            background-color: white;
+            font-size: 1.5vh;
+            padding: 4px 7px 4px 7px;
+            /* top: 8px; */
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid;
+            box-shadow: 1px 1px 2px 1px #888888;
+            right: 0px;
+            /* color: black; */
+            /* box-shadow: 2px 2px red; */
+            /* text-shadow:1px 1px 2px rgb(17, 92, 232); */
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #817b7b;
+            z-index: 9;
+        }
+
+        #myPDF {
+            display: none;
+            width: 100%;
+            height: 975px;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: black;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <title>INSIGHTS</title>
+</head>
+
+<body>
+
+    <!-- form popup 1 -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container" name="myForm" id="report1" action="#">
+            <!--take data from the form in backend and  redirect to the pdf file according the id -->
+
+
+
+            <input type="text" placeholder="Enter Name" id="NameReport1" name="userName" required>
+
+
+            <input type="text" placeholder="Enter Mail" id="MailReport1" name="userMail" required>
+
+
+            <button type="submit" class="btn cancel" onclick="validate()">Submit</button>
+            <!--onclick="viewReport1()" -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- form popup end 1 -->
+    <!-- header div  -->
+    <header class="header-area">
+        <div class="header-container">
+
+            <!-- <div class="col" style="background-color: red;">sf</div> -->
+            <div class=" site-logo" d="logoid">
+                <a><img src="./images/Utopiic Registered logo-02.png" width="200vh">
+                </a>
+            </div>
+            <div class=" mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class=" site-nav-menu">
+                <ul class="primary-menu" style="padding-top: 1vh;">
+                    <li class="text-white">About us</li>
+                    <li class="text-white">Insights</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="container-fluid1"></div>
+    </header>
+    <!-- artile 1 -->
+
+    <body class="u-body u-xl-mode">
+        <header class="u-clearfix u-header u-header" id="sec-bafd">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <h1 class="u-text u-text-default u-text-1" style="padding-top:3.5% ;">Green building Innovation and
+                    Sustainable Designs in Hotel</h1>
+        </header>
+        <section class="u-clearfix u-white u-section-1" id="carousel_fb95">
+            <div class="u-clearfix u-sheet u-sheet-1">
+                <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div
+                                class="u-container-style u-layout-cell u-left-cell u-similar-fill u-size-27 u-layout-cell-1">
+                                <div class="u-container-layout u-container-layout-1">
+                                    <img class="u-absolute-hcenter-xs u-expanded u-image u-image-1"
+                                        src="images/img_211025083844.png">
+                                </div>
+                            </div>
+                            <div
+                                class="u-container-style u-layout-cell u-right-cell u-similar-fill u-size-33 u-layout-cell-2">
+                                <div class="u-container-layout u-container-layout-2">
+                                    <p class="u-text u-text-1">&nbsp;The food and beverage processing industry has been
+                                        known to be a major contributor to landfill waste and the industry around the
+                                        world is trying to make serious efforts in trying to minimize by-products,
+                                        compost all the organic waste if possible, and recycle processing and packaging
+                                        materials in order to save water and energy. The food and beverage processing
+                                        plants can use the 3 R's of waste management i.e. Reduce, Reuse and Recycle
+                                        which are going to have a positive impact on reducing landfill waste.
+
+                                        <br><br>
+
+
+                                        EPA has a Food Recovery Hierarchy which provides stupendous resources which the
+                                        food and beverage producers can follow and abide by as it provides a framework
+                                        to start a program or process that will be most beneficial for all the different
+                                        stakeholders like environment, society and food manufacturers as whole.
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="u-text u-text-2">As we can see from the illustration above landfill is mentioned to be the
+                    least preferred form of waste disposal generated by food and beverage producers worldwide. There are
+                    better ways to get rid of the waste by using more effective and profitable ways of waste
+                    management.2 Some of the more sustainable methods of waste management is by making animal feed,
+                    composting to make nutrient rich fertilizer3, anaerobic digestion to produce energy rich biogas4,
+                    recycling or reusing waste for utilization by other industries and feeding the surplus food to
+                    people in need.
+                    <br>
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-2"
+                    src="images/downloaded-angle.jpg" alt="" data-image-width="960" data-image-height="640">
+            </div>
+        </section>
+        <section class="u-clearfix u-section-2" id="sec-53af">
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1" style="padding-top: 0% !important;">
+                <p class="u-text u-text-1">As discussed above there are various waste management options that are
+                    available and now we are going to have a look at some of them. All the major food manufacturers have
+                    the same unique problem, the product which is in access has a short shelf life while most of the
+                    waste is organic in nature. The production of food and beverages creates waste5 that can be turned
+                    into animal feed and sold to cattle, pig farms etc. There is also waste produced in terms of
+                    wastewater which can be reused after treatment. This wastewater sludge is being recycled or reused
+                    by top food and beverage manufacturers through land application, anaerobic digestion and composting
+                    alternatives.
+
+                    The organic waste that is produced at manufacturing plants can be made into composts in modern
+                    in-vessel process and the fertilizer hence produced can be used for in house landscaping or
+                    alternatively can be sold at attractive prices as organic fertilizer.
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-3"
+                    src="images/downloaded-plastic.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+            </div>
+
+
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1">
+                <p class="u-text u-text-1" style="padding-top:60px ;">Another sustainable alternative of managing the
+                    organic waste at food and beverage manufacturing plants is to degrade it biologically in a digester
+                    that is anaerobic in nature which in turn produces biogas which is energy-rich and waste is known as
+                    digestate. These products can have various implementations like the biogas can be a good alternative
+                    to heating fuel in the plant itself or it can be converted into electricity while the disgestate can
+                    be used as a manure. Biogas can also be used after converting it into biomethane6 or Bio CNG which
+                    can be used as vehicular fuel.
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-4"
+                    src="images/downloaded-can.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+            </div>
+
+
+            <div class="u-clearfix u-sheet u-valign-top-lg ">
+                <p class="u-text u-text-1" style="padding-top:60px ; padding-bottom: 40px;"> Items which are not organic
+                    like cardboard, clean plastics, metal and paper are commodities which can be sold to the recyclers.
+                    Cardboard boxes are the material that is used the most and it can be flattened down into flat pieces
+                    and sold to recyclers for attractive prices. Cardboard boxes can also be reused to store materials
+                    like packages in the factory which will make the most of these boxes. Packaging on the other hand
+                    can be tricky. Major manufacturers of food and beverages use jet shredder waste management
+                    technologies which helps to separate film, cartons and food all of which are recycled separately.
+                </p>
+
+            </div>
+
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1">
+
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-4"
+                    src="images/downloaded-kfc.jpg" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+            </div>
+            <div class="u-clearfix u-sheet u-valign-top-lg u-sheet-1">
+                <p class="u-text u-text-1" style="padding-top:60px ;">Major food and beverage manufacturers are trying
+                    to achieve zero waste from their processes. But the question arises how do we achieve zero waste?
+                    The best way to go about it is to start small and do what you can. Zero waste programs can be
+                    perfected by setting goals and targets set to be achieved in a year. Establishing a core team can be
+                    a crucial step in order to find different ways to reduce waste, energy and utilities.
+                </p>
+                <img class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-4"
+                    src="images/downloaded-lib.png" alt="" data-image-width="960" data-image-height="640"
+                    style="width: 100%; max-height: 437px;">
+                <p class="u-text u-text-1" style="padding-top:60px ;">Measurements of different waste streams and
+                    developing a benchmark is the first step in the Zero Waste Program. The primary data once collected
+                    is broken down into numbers and categories according to the previously mentioned EPA’s Food Recovery
+                    Challenge and identification of potential opportunities. The best example can be of inorganic
+                    materials which are categorized based on their end lives reuse, recycle or landfill. Food and
+                    beverage industry can perform waste sorting exercises in order to identify key waste streams.7
+
+<br>
+<br>
+
+                    Nestle USA Case Study
+                    <br>
+                    Nestle USA in spring of 2015, made an announcement that all 23 of its facilities were landfill free.
+                    Nestle USA mentions in its sustainability report that it is constantly trying to look for new
+                    alternatives to reuse, recycle and recover energy. It found in its study that the best ways to do it
+                    were methods like composting, recycling and energy production and the production of safe products as
+                    animal feed while disposing of manufacturing by-products.
+                    <br>
+                    Employees also work to minimize by-products and engage in recycling programs and partnerships with
+                    credible waste vendors that dispose of manufacturing by-products in line with Nestlé’s environmental
+                    sustainability guidelines and standards. All Nestlé facilities employ ISO 14001-certified
+                    environmental management systems to minimize their environmental impact.8
+
+                    <br><br><br>
+
+
+
+
+
+
+                    1 https://www.epa.gov/sustainable-management-food/food-recovery-hierarchy
+                    <br>
+                    2 https://www.bioenergyconsult.com/effective-waste-management/
+                    <br>
+                    3 https://www.bioenergyconsult.com/effective-waste-management/
+                    <br>
+                    4 https://www.bioenergyconsult.com/significance-of-anaerobic-digestion-of-food-waste/
+                    <br>
+                    5 https://www.bioenergyconsult.com/food-waste-to-energy/
+                    <br>
+                    6 https://www.bioenergyconsult.com/biomethane-from-food-waste/
+                    <br>
+                    7 https://www.bioenergyconsult.com/technologies-to-help-start-up-in-beverage-industry/
+                    <br><br>
+
+                    8 https://www.nestleusa.com/media/pressreleases/nestl%C3%A9-usa-announces-that-all-23-factories-a
+                    chieve-zero-waste-to-landfill
+
+                </p>
+            </div>
+
+    </body>
+
+
+    <!-- article 1 end -->
+    <!-- Footer -->
+    <div class="container-fluid1">
+
+        <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+            <!-- ombre div  -->
+            <div id="container-fluid1"></div>
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+                            <!-- Links -->
+
+                            <h5>
+                                <a href="#!" class="text-white" style="text-decoration: none;">About us</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./privacy.html" class="text-white" style="text-decoration: none;">Privacy
+                                    Policy</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./tc.html" class="text-white" style="text-decoration: none;">Terms &
+                                    Conditions</a>
+                            </h5>
+
+                            <h5>
+                                <a href="" class="text-white" style="text-decoration: none;">Contact</a>
+                            </h5>
+                        </div>
+                        <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for
+                                        our newsletter for
+                                        the latest news and insights on sustainability and climate change
+                                    </label>
+
+                                    <div class="col p-4"> <input type="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter email"></div>
+                                    <div class="col p-4"><button type="submit"
+                                            class="btn btn-secondary">Subscribe</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+</body>
+<!-- <script src="BlogJs/Blog1.js"></script> -->
+
+</html>
