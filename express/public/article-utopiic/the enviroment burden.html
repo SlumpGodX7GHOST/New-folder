@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Home.css" media="screen">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Blog Page/css/main.css">
+
+    <style>
+        .top-right {
+            position: absolute;
+            background-color: white;
+            font-size: 1.5vh;
+            padding: 4px 7px 4px 7px;
+            /* top: 8px; */
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid;
+            box-shadow: 1px 1px 2px 1px #888888;
+            right: 0px;
+            /* color: black; */
+            /* box-shadow: 2px 2px red; */
+            /* text-shadow:1px 1px 2px rgb(17, 92, 232); */
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #817b7b;
+            z-index: 9;
+        }
+
+        #myPDF {
+            display: none;
+            width: 100%;
+            height: 975px;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: black;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <title>INSIGHTS</title>
+</head>
+
+<body>
+
+    <!-- form popup 1 -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container" name="myForm" id="report1" action="#">
+            <!--take data from the form in backend and  redirect to the pdf file according the id -->
+
+
+
+            <input type="text" placeholder="Enter Name" id="NameReport1" name="userName" required>
+
+
+            <input type="text" placeholder="Enter Mail" id="MailReport1" name="userMail" required>
+
+
+            <button type="submit" class="btn cancel" onclick="validate()">Submit</button>
+            <!--onclick="viewReport1()" -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- form popup end 1 -->
+    <!-- header div  -->
+    <header class="header-area">
+        <div class="header-container">
+
+            <!-- <div class="col" style="background-color: red;">sf</div> -->
+            <div class=" site-logo" d="logoid">
+                <a><img src="./images/Utopiic Registered logo-02.png" width="200vh">
+                </a>
+            </div>
+            <div class=" mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class=" site-nav-menu">
+                <ul class="primary-menu" style="padding-top: 1vh;">
+                    <li class="text-white">About us</li>
+                    <li class="text-white">Insights</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="container-fluid1"></div>
+    </header>
+    <!-- artile 1 -->
+
+    <body class="u-body u-xl-mode">
+        <header class="u-clearfix u-header u-header" id="sec-bafd">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <h1 class="u-text u-text-default u-text-1" style="padding-top:3.5% ;">The Environment's Burden of Cryptocurrency</h1>
+        </header>
+
+        <section class="u-clearfix u-white u-section-1" id="carousel_fb95">
+
+            <div class="u-clearfix u-sheet u-sheet" style="padding-bottom: 8% ;">
+                <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div
+                                class="u-container-style u-layout-cell u-left-cell u-similar-fill u-size-27 u-layout-cell-1">
+
+                                <div class="u-container-layout u-container-layout-1">
+                                    <img class="u-absolute-hcenter-xs u-expanded u-image u-image-1"
+                                        src="images/20220455010955.png">
+                                </div>
+                            </div>
+                            <div
+                                class="u-container-style u-layout-cell u-right-cell u-similar-fill u-size-33 u-layout-cell-2">
+                                <div class="u-container-layout u-valign-middle-md u-valign-top-xs u-container-layout-2">
+                                    <p class="u-text u-text-1">&nbsp;As the world is struggling with how to effectively
+                                        combat climate change, excessive use of fossil fuels, farming and industrial
+                                        pollutants have played a major role in the crisis.
+                                        <br><br>
+                                        However, in recent years the
+                                        conversation is shifting to cryptocurrency and its impact. There’s a lot of buzz
+                                        these days about cryptocurrencies, the private sector's digital version of
+                                        safeguarding money from theft by encryption and blockchain technology counting,
+                                        which produces a myriad of digital ledgers on computers spread around the globe.
+                                        Let's look at what cryptocurrency is and how it operates to get a better
+                                        understanding of its environmental impact.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="u-text u-text-2">
+                  <h4>  What is Cryptocurrency?</h4>
+<br><br>
+                    Cryptocurrency has become a mainstream phenomenon in the 21st century. It has become a household
+                    name since its inception as a well-established notion in 2009. A cryptocurrency is an electronic
+                    medium of trade that has no physical counterpart, such as a coin or a dollar bill, and no money has
+                    been staked to begin it. Bitcoin, the world's most popular cryptocurrency, which accounts for more
+                    than half of all cryptocurrencies, may be used to purchase cars, furniture, trips, and other items.
+                    As we all know, the rise of additional rival coins such as Altcoins, as well as the growth of
+                    Bitcoin has elevated cryptocurrency to a pedestal where it attracts greater attention.
+                    Cryptocurrencies are decentralized, which means they are not regulated by a central authority such
+                    as a bank or government. The benefit is that there are no transaction fees, it is accessible to
+                    everybody, and it simplifies transactions such as transmitting money across national borders. The
+                    people who make the transactions are anonymous and untraceable. However, because of the anonymity
+                    and lack of centralized control, tax evaders, criminals, and terrorists may be able to negatively
+                    use cryptocurrencies. Cryptocurrencies can be bought and sold by investors in addition to being used
+                    for purchases and transactions. According to CNBC, the global market for cryptocurrencies surpassed
+                    $2 trillion for the first time in April 2021, with bitcoin being the most valuable digital asset,
+                    accounting for more than half of the total market share. Whether as an investor or a trader,
+                    cryptocurrency continues to grow in value year after year as a result of massive investment.
+                    According to Investopedia, cryptocurrencies have grown in popularity due to the decentralized ideas
+                    they promote, as well as the possibility of large gains.
+                    <br><br><br>
+
+
+                  <h4>  How much does cryptocurrency cost the environment?</h4>
+                    <br><br>
+                    Energy Consumption: The electricity required for the mining process, which is how new digital
+                    currency is created, is the most visible environmental impact of crypto. While most people are
+                    familiar with Bitcoin mining, mining is used in a variety of cryptocurrencies. However, since
+                    Bitcoin's launch, it's getting increasingly difficult to create new units of currency through
+                    mining. Because the currency's supply is limited to 21 million units, more units are created
+                    resulting in fewer units being accessible for mining, and minting new ones requires more processing
+                    power. Because of the preprogrammed scarcity paired with the opportunity for financial gain (one
+                    Bitcoin is now worth roughly $42,000, and the current payout for mining a new block is 6.25
+                    Bitcoin), more people are mining what's left. According to the Cambridge Bitcoin Electricity
+                    Consumption Index, Bitcoin mining consumes more electricity per year globally than in some
+                    countries, such as the Netherlands and Pakistan. The estimated carbon footprint generated by the
+                    power plants that provide the energy is a source of environmental concern. A single Bitcoin
+                    transaction is projected to consume 2,292.5 kilowatt-hours of electricity, which is enough to run a
+                    normal US family for nearly 78 days. Although electricity appears to be a clean form of energy, many
+                    countries generate it by burning fossil fuels, which adds to the carbon in the atmosphere and
+                    exacerbates climate change. According to the University of Cambridge, the United States is home to
+                    about 35% of Bitcoin mining operations and generates 60% of its electricity from fossil fuels.
+                    There's also the problem of tangible electronic waste to consider. Mining is done via computers,
+                    graphics cards, and custom-built ASIC rigs, among other things. People are continuously upgrading
+                    and discarding old equipment because increased computational power gives them an advantage in the
+                    battle to mine more coins, resulting in up to 30,000 tonnes of technological garbage every year.
+                    <br>
+                    Water Issues and E-waste: Greenidge and other power plants need a lot of water. Greenidge extracts
+                    up to 139 million gallons of fresh water every day from Seneca Lake to cool the plant, then releases
+                    it at temperatures of about 30 to 50 degrees Fahrenheit over the lake's typical temperature,
+                    hampering the lake's animals and ecology. Its enormous intake pipes also suck in and destroy larvae,
+                    fish, and other creatures. Even if it becomes possible to power all bitcoin mining on renewable
+                    energy in the future, the problem of e-waste will still exist. Miners need the most efficient
+                    hardware to be competitive and capable of executing the most computations per unit of energy. Every
+                    1.5 years, this specialized hardware becomes obsolete and can't be reprogrammed to do anything else.
+                    The Bitcoin network is predicted to generate 11.5 kilotons of e-waste every year, adding to our
+                    already massive e-waste problem.
+                    <br><br>
+                    NFTs: NFTs, a new art phenomenon has added to the environmental worries regarding cryptocurrencies.
+                    These are non-fungible tokens, which are digital files of images, music, films, and other types of
+                    artwork that have been stamped with unique code strings. People can look at or duplicate NFTs, but
+                    each buyer has only one NFT, which is stored on the blockchain and secured using the same
+                    energy-intensive proof of work procedure. NFTs are selling for hundreds of thousands of dollars; one
+                    NFT sold for more than $69 million to Beeple, a digital artist.
+                    <br><br><br>
+
+
+                  <h4>  What can be done to make cryptocurrencies more sustainable?</h4>
+                    <br><br>
+                    It would be difficult to move to a more energy-efficient system because the entire Bitcoin network
+                    has spent millions of dollars on hardware and infrastructure, especially because there is no central
+                    control authority. However, a lot of initiatives are underway to lower Bitcoin and cryptocurrency's
+                    overall carbon footprint. Elon Musk, the CEO of Tesla, met with the heads of the major crypto mining
+                    companies in North America to discuss their energy consumption. As a result, a new Bitcoin Mining
+                    Council was established to encourage energy transparency.
+                    <br><br>
+                    Another proposal, backed by 40 projects, is the Crypto Climate Accord, which aims to make
+                    blockchains run on 100 percent renewable energy by 2025 and for the entire cryptocurrency industry
+                    to be carbon-neutral by 2040. It aims to decarbonize blockchains by promoting the use of more
+                    energy-efficient validation methods, advocating for proof of work systems to be located in areas
+                    with excess renewable energy that can be tapped, and encouraging the purchase of certificates to
+                    support renewable energy generators, similar to how offsetting carbon support green projects.
+                    Efforts to make crypto more environmentally friendly include using methane gas from fossil fuel
+                    drilling that would otherwise be burned off, as well as locating plants in regions with plentiful
+                    wind power, like West Texas.
+                    <br><br>
+                    Developers are focusing on the architecture of future cryptocurrencies to save energy, mostly by
+                    switching to new validation systems that aren't based on proof of work. The proof of stake (PoS)
+                    system, for example, is gaining traction and is based on how much of a given cryptocurrency a user
+                    has pledged to stake, or hold and not sell. In comparison to the race to crunch through equations
+                    that come with mining in a PoW system, this consumes less processing resources. Ethereum's
+                    blockchain will soon utilize a variant of the PoS method to verify new blocks. Other methods, such
+                    as evidence of history, proof of elapsed time, proof of burn, and proof of capacity, are also being
+                    developed.
+
+                </p>
+            </div>
+
+    </body>
+
+    <!-- article 1 end -->
+    <!-- Footer -->
+    <div class="container-fluid1">
+
+        <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+            <!-- ombre div  -->
+            <div id="container-fluid1"></div>
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+                            <!-- Links -->
+
+                            <h5>
+                                <a href="#!" class="text-white" style="text-decoration: none;">About us</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./privacy.html" class="text-white" style="text-decoration: none;">Privacy
+                                    Policy</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./tc.html" class="text-white" style="text-decoration: none;">Terms &
+                                    Conditions</a>
+                            </h5>
+
+                            <h5>
+                                <a href="" class="text-white" style="text-decoration: none;">Contact</a>
+                            </h5>
+                        </div>
+                        <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for
+                                        our newsletter for
+                                        the latest news and insights on sustainability and climate change
+                                    </label>
+
+                                    <div class="col p-4"> <input type="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter email"></div>
+                                    <div class="col p-4"><button type="submit"
+                                            class="btn btn-secondary">Subscribe</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+</body>
+<!-- <script src="BlogJs/Blog1.js"></script> -->
+
+</html>

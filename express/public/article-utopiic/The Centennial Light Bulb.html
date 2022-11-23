@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Home.css" media="screen">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Blog Page/css/main.css">
+
+    <style>
+        .top-right {
+            position: absolute;
+            background-color: white;
+            font-size: 1.5vh;
+            padding: 4px 7px 4px 7px;
+            /* top: 8px; */
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid;
+            box-shadow: 1px 1px 2px 1px #888888;
+            right: 0px;
+            /* color: black; */
+            /* box-shadow: 2px 2px red; */
+            /* text-shadow:1px 1px 2px rgb(17, 92, 232); */
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #817b7b;
+            z-index: 9;
+        }
+
+        #myPDF {
+            display: none;
+            width: 100%;
+            height: 975px;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: black;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <title>INSIGHTS</title>
+</head>
+
+<body>
+
+    <!-- form popup 1 -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container" name="myForm" id="report1" action="#">
+            <!--take data from the form in backend and  redirect to the pdf file according the id -->
+
+
+
+            <input type="text" placeholder="Enter Name" id="NameReport1" name="userName" required>
+
+
+            <input type="text" placeholder="Enter Mail" id="MailReport1" name="userMail" required>
+
+
+            <button type="submit" class="btn cancel" onclick="validate()">Submit</button>
+            <!--onclick="viewReport1()" -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- form popup end 1 -->
+    <!-- header div  -->
+    <header class="header-area">
+        <div class="header-container">
+
+            <!-- <div class="col" style="background-color: red;">sf</div> -->
+            <div class=" site-logo" d="logoid">
+                <a><img src="./images/Utopiic Registered logo-02.png" width="200vh">
+                </a>
+            </div>
+            <div class=" mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class=" site-nav-menu">
+                <ul class="primary-menu" style="padding-top: 1vh;">
+                    <li class="text-white">About us</li>
+                    <li class="text-white">Insights</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="container-fluid1"></div>
+    </header>
+    <!-- artile 1 -->
+
+    <body class="u-body u-xl-mode">
+        <header class="u-clearfix u-header u-header" id="sec-bafd">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <h1 class="u-text u-text-default u-text-1" style="padding-top:3.5% ;">The Centennial Light Bulb</h1>
+        </header>
+
+        <section class="u-clearfix u-white u-section-1" id="carousel_fb95">
+
+            <div class="u-clearfix u-sheet u-sheet" style="padding-bottom: 8% ;">
+                <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div
+                                class="u-container-style u-layout-cell u-left-cell u-similar-fill u-size-27 u-layout-cell-1">
+
+                                <div class="u-container-layout u-container-layout-1">
+                                    <img class="u-absolute-hcenter-xs u-expanded u-image u-image-1"
+                                        src="images/img_220512120710.jpg">
+                                </div>
+                            </div>
+                            <div
+                                class="u-container-style u-layout-cell u-right-cell u-similar-fill u-size-33 u-layout-cell-2">
+                                <div class="u-container-layout u-valign-middle-md u-valign-top-xs u-container-layout-2">
+                                    <p class="u-text u-text-1">&nbsp;According to research by the National Association
+                                        of Homebuilders, the average appliance lasts less than 15 years, although some
+                                        have been around for much longer. As per the Guinness World Records, the
+                                        Centennial Light Bulb in Livermore, California, was installed in 1901 and is the
+                                        world's longest-burning light bulb. The Shelby Electric Company in Ohio created
+                                        the hand-blown bulb in the late 1890s, and it was handed to the Livermore Fire
+                                        Department in 1901. It was originally a 30-watt light, but since 2010, it has
+                                        been running at about 4 watts. According to Guinness, it has been left on 24
+                                        hours a day at Fire Station #6 "to provide night illumination to the fire
+                                        engines." It has rarely been switched off since its installation in 1901, has
+                                        outlived every firefighter of the time, and has been named the ‘Eternal Light’
+                                        by General Electric engineers and scientists all around the world. The origins
+                                        of the bulb, termed the Centennial Light, raises the question of whether it is a
+                                        physics marvel or a hint that modern bulbs are weaker in make and design. Its
+                                        long-term viability is still a mystery.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="u-text u-text-2">
+                  <h4>  Historical Perspective</h4>
+<br><br>
+                    In 1881, Thomas Edison introduced the first commercial bulb, which lasted 1,500 hours, and soon
+                    after bulb manufacturers boasted of 2,500-hour bulbs. However, in 1924, the major bulb makers in the
+                    United States and Europe secretly created a cartel to limit light life to 1,000 hours. By the 1940s,
+                    1,000-hour bulbs had established themselves as the industry norm. The cartel was eventually
+                    revealed, and in 1953, General Electric and other industry leaders were prohibited from reducing the
+                    life duration of light bulbs. The inventor of the better filament, Adolphe A. Chaillet of the Shelby
+                    Electric Company, was granted a patent in 1902, but no information about the filament's structure or
+                    composition was published. Thomas Edison has always been credited with inventing the light bulb.
+                    Many inventors, on the other hand, have contributed to the advancement of incandescent light bulb
+                    technology. Although there is no doubt that Edison, as well as his successor business General
+                    Electric, invented the first successful mass-produced incandescent bulb.
+                    <br><br>
+
+                    In 1972, a fire marshal in Livermore, California, reported an unusual occurrence to the local paper:
+                    a naked Shelby light bulb hanging from the ceiling of his station had been glowing continuously for
+                    decades. The bulb had been a legend at the firehouse for years, but no one knew how long it had been
+                    burning or where it had come from. Mike Dunstan, a young reporter for the Tri-Valley Herald, started
+                    looking into it and what he discovered was simply incredible. Dunstan discovered the bulb's origins
+                    after combing through dozens of oral and written documented histories. It was purchased by Dennis
+                    Bernal of the Livermore Power and Water Co. (the city's first power company) sometime in the late
+                    1890s, then donated to the city's fire department in 1901, when Bernal sold the company. Because
+                    only 3% of American houses had electricity at the time, the Shelby bulb was in high demand.
+                    <br><br>
+
+                    The ‘Centennial Light’ was moved numerous times during its early life: it hung in a hose cart for a
+                    few months, then was secured in Livermore's fire station after a brief spell in a garage and City
+                    Hall. “It was left on 24 hours a day to break up the darkness so the volunteers could find their
+                    way,” then-Fire Chief Jack Baird told Dustan. “It’s part of another era in the city’s past and it’s
+                    served its purpose well.” Despite the fact that it was switched off for "approximately a week when
+                    President Roosevelt's WPA team refurbished the firehouse back in the 1930s," Guinness World Records
+                    determined that the hand-blown 30-watt bulb was "the oldest glowing light in the world" at 71 years
+                    old (presently 121 years old). Following that, it received a flurry of headlines, including
+                    appearances on Ripley's Believe It or Not and various news networks. A dedicated webcam allowed the
+                    general public to witness the bulb had reportedly burned out on the evening of May 20, 2013. The
+                    next morning, an electrician was dispatched to confirm the situation. It was determined that the
+                    light had not burned out when the dedicated power supply was bypassed with an extension cable. A
+                    problem with the power supply was detected. Before the sun was finally restored, it had been out for
+                    about 9 hours and 45 minutes.
+
+                    <br><br>
+
+                  <h4>  Closest Competitors</h4>
+                  <br><br>
+                    "On September 21, 1908, a stagehand named Barry Burke at the Byers Opera House, Fort Worth, Texas
+                    screwed in a new light bulb and it was still burning," according to the Guinness Book of World
+                    Records. The Palace Theater was renamed, and the light was known as the Palace Bulb ever since. It's
+                    presently on display at the Stockyards Museum, and it'll be 100 years old in September 2008. A
+                    website is currently being developed for the Palace Bulb. The third is simply known as ‘the bulb,’
+                    and it burns in a firehouse in Mangum, Oklahoma, just like the centennial bulb. It has been in use
+                    since roughly 1926, does not require any specific power conversions, and is turned on and off as
+                    needed. A light in a lavatory at Martin & Newby Electrical Shop in Ipswich, England, dated from 1930
+                    and burned out in January 2001 was the fourth closest in line. The City of Livermore and the
+                    Livermore-Pleasanton Fire Department plan to keep the Centennial Light Bulb lit as long as possible.
+                    They are yet to decide on what action will be taken if and when it burns out. A museum-quality
+                    display of historic bulbs, firefighter memorabilia, and a looping video about the Bulb are up and
+                    running for now, attracting many out of curiosity, intrigue, and a passion to dwell further on the
+                    existing pieces of evidence of the origins of technology.
+
+
+
+                </p>
+            </div>
+
+    </body>
+
+    <!-- article 1 end -->
+    <!-- Footer -->
+    <div class="container-fluid1">
+
+        <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+            <!-- ombre div  -->
+            <div id="container-fluid1"></div>
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+                            <!-- Links -->
+
+                            <h5>
+                                <a href="#!" class="text-white" style="text-decoration: none;">About us</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./privacy.html" class="text-white" style="text-decoration: none;">Privacy
+                                    Policy</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./tc.html" class="text-white" style="text-decoration: none;">Terms &
+                                    Conditions</a>
+                            </h5>
+
+                            <h5>
+                                <a href="" class="text-white" style="text-decoration: none;">Contact</a>
+                            </h5>
+                        </div>
+                        <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for
+                                        our newsletter for
+                                        the latest news and insights on sustainability and climate change
+                                    </label>
+
+                                    <div class="col p-4"> <input type="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter email"></div>
+                                    <div class="col p-4"><button type="submit"
+                                            class="btn btn-secondary">Subscribe</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+</body>
+<!-- <script src="BlogJs/Blog1.js"></script> -->
+
+</html>

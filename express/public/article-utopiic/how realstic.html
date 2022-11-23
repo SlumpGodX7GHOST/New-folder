@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Home.css" media="screen">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Blog Page/css/main.css">
+
+    <style>
+        .top-right {
+            position: absolute;
+            background-color: white;
+            font-size: 1.5vh;
+            padding: 4px 7px 4px 7px;
+            /* top: 8px; */
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid;
+            box-shadow: 1px 1px 2px 1px #888888;
+            right: 0px;
+            /* color: black; */
+            /* box-shadow: 2px 2px red; */
+            /* text-shadow:1px 1px 2px rgb(17, 92, 232); */
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #817b7b;
+            z-index: 9;
+        }
+
+        #myPDF {
+            display: none;
+            width: 100%;
+            height: 975px;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: black;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <title>INSIGHTS</title>
+</head>
+
+<body>
+
+    <!-- form popup 1 -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container" name="myForm" id="report1" action="#">
+            <!--take data from the form in backend and  redirect to the pdf file according the id -->
+
+
+
+            <input type="text" placeholder="Enter Name" id="NameReport1" name="userName" required>
+
+
+            <input type="text" placeholder="Enter Mail" id="MailReport1" name="userMail" required>
+
+
+            <button type="submit" class="btn cancel" onclick="validate()">Submit</button>
+            <!--onclick="viewReport1()" -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- form popup end 1 -->
+    <!-- header div  -->
+    <header class="header-area">
+        <div class="header-container">
+
+            <!-- <div class="col" style="background-color: red;">sf</div> -->
+            <div class=" site-logo" d="logoid">
+                <a><img src="./images/Utopiic Registered logo-02.png" width="200vh">
+                </a>
+            </div>
+            <div class=" mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class=" site-nav-menu">
+                <ul class="primary-menu" style="padding-top: 1vh;">
+                    <li class="text-white">About us</li>
+                    <li class="text-white">Insights</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="container-fluid1"></div>
+    </header>
+    <!-- artile 1 -->
+
+    <body class="u-body u-xl-mode">
+        <header class="u-clearfix u-header u-header" id="sec-bafd">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <h1 class="u-text u-text-default u-text-1" style="padding-top:3.5% ;">How Realistic is the Net Zero Goal by 2050?</h1>
+        </header>
+
+        <section class="u-clearfix u-white u-section-1" id="carousel_fb95">
+
+            <div class="u-clearfix u-sheet u-sheet" style="padding-bottom: 8% ;">
+                <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div
+                                class="u-container-style u-layout-cell u-left-cell u-similar-fill u-size-27 u-layout-cell-1">
+
+                                <div class="u-container-layout u-container-layout-1">
+                                    <img class="u-absolute-hcenter-xs u-expanded u-image u-image-1"
+                                        src="images/20220452123952.jpg">
+                                </div>
+                            </div>
+                            <div
+                                class="u-container-style u-layout-cell u-right-cell u-similar-fill u-size-33 u-layout-cell-2">
+                                <div class="u-container-layout u-valign-middle-md u-valign-top-xs u-container-layout-2">
+                                    <p class="u-text u-text-1">&nbsp;
+                                        We are in the midst of a climate emergency, given the amount of extreme weather
+                                        we've witnessed in recent years, from Australian bushfires to flooding in the
+                                        United Kingdom. The scientific data is clear: human-caused greenhouse gas
+                                        emissions are causing climate change. When fossil fuels are used to meet our
+                                        energy demands, carbon dioxide is released. Carbon dioxide is the most
+                                        significant greenhouse gas, yet it is not the only one. As a result, the phrase
+                                        ‘carbon emissions’ is frequently being used to refer to all greenhouse gas
+                                        emissions. ‘Net-zero’ has become a rallying cry for action on climate change
+                                        since world leaders met in Paris in 2015 and pledged to strive to limit global
+                                        warming to 1.5 degrees Celsius. In order to have a reasonable chance of meeting
+                                        the Paris goal, the world must reduce carbon emissions to the point where
+                                        greenhouse gas levels in the atmosphere do not grow any further after 2050.
+
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="u-text u-text-2">
+                   <h4> What does net zero mean?</h4>
+<br><br>
+                    The term net-zero refers to striking a balance between carbon emission and carbon absorption in the
+                    atmosphere. This equilibrium – or net-zero – will be reached when the quantity of carbon we add to
+                    the atmosphere equals the amount we remove. To achieve net-zero emissions, reductions in emissions
+                    from residences, transportation, agriculture, and industry will be required. To put it another way,
+                    these industries will be required to reduce the amount of carbon they emit into the environment.
+                    However, in other domains, like aviation, it will be too difficult or expensive to eliminate
+                    emissions. These ‘residual’ emissions will need to be removed from the atmosphere: either by
+                    changing how we use our land so it can absorb more carbon dioxide or by being extracted directly
+                    through technologies known as carbon capture, usage, and storage. Zero emissions mean no Carbon
+                    Dioxide, Methane, Nitrous Oxide, or other greenhouse gasses are released into the atmosphere. While
+                    some greenhouse gasses are still released when net-zero emissions are achieved, these are offset by
+                    taking an equivalent quantity of greenhouse gasses from the atmosphere and permanently storing it in
+                    soil, plants, or materials. Because completely eliminating some sources of emissions would be
+                    excessively expensive or disruptive, reaching net-zero emissions is seen as more realistic than
+                    achieving zero emissions on a national basis.
+                    <br><br><br>
+
+
+                    <h4>Is Net-Zero 2050 possible and how much will it cost?</h4>
+                    <br><br>
+                    The Paris Agreement, a legally binding international pact on climate change reached at COP21 in
+                    2015, has been ratified by more than 190 countries. By the end of this century, the agreement
+                    intends to keep global temperatures below 2°C above pre-industrial levels. The year 2050 was also
+                    seen as the first credible deadline for achieving net-zero emissions, reconciling the pressing
+                    urgency to act with the inevitable economic consequences. It is a lofty goal that will necessitate
+                    considerable adjustments over the next ten years (not only by 2050) if countries are to achieve
+                    'net-zero’ carbon dioxide emissions by the middle of the century. If we ignore the influence of
+                    Covid-19 for a moment, we can see that this decline is largely attributable to a shift in the way we
+                    generate energy. We will, however, need to adapt how we utilize energy in our daily lives. Reaching
+                    net-zero emissions by 2050 will not be cheap. A trillion dollars would have to be invested in the
+                    cause. The headline statistic in McKinsey's recent analysis of the costs of reaching net-zero
+                    emissions between now and 2050 is a startling $9.2 trillion per year. This amounts to a total
+                    investment of $275 trillion in energy assets and land-use systems spanning from agriculture to
+                    forestry.
+                    <br><br>
+                    These figures are significantly higher than previous estimates, indicating the magnitude of the
+                    problem. They may appear much greater when compared to the scale of the global economy, accounting
+                    for between 6% and nearly 9% of world GDP. However, the more one looks at this particular set of
+                    trillions of dollars, the smaller the figures become to achieve the goal of the clean energy
+                    transition. It is evident that failing to aim for net-zero is not an option. The costs of
+                    catastrophic climate change if left unchecked will be substantially higher than the price of
+                    achieving net-zero, according to some estimates: several trillions of pounds. In the end, it's
+                    impossible to put a price on the benefits of obtaining a net zero. It isn't only about lowering
+                    pollution. It's also about improving people's quality of life: cleaner air and water, warmer and
+                    healthier homes, cleaner transportation, greener landscapes, and better wildlife habitats.
+
+                    <br><br><br>
+
+                   <h4> What technologies are needed to achieve this goal?</h4>
+                    <br><br>
+                    Net-zero emissions would necessitate significant changes in energy production and use, as well as
+                    increased greenhouse gas removal from the environment. There are four basic solutions for achieving
+                    net-zero emissions that are most feasible:
+                    <br><br>
+                    1. Produce electricity without releasing any pollutants into the environment. Wind, solar, nuclear,
+                    and water power, combined with developments in electricity storage, can provide a significant
+                    portion of the country's electricity with minimum CO2 emissions. To ensure that electricity is
+                    constantly accessible, other low-carbon energy sources can be employed in conjunction with these
+                    power sources.
+                    <br<br>>
+                    2. Instead of fossil fuels, use electricity to power vehicles and equipment. Many major sources of
+                    greenhouse gas emissions can be replaced by electricity-powered equipment. Switching to electric
+                    automobiles and trucks, as well as heating buildings with electricity, would significantly reduce
+                    emissions.
+                    <br><br>
+                    3. Increase the efficiency of your energy usage. Emissions can be reduced greatly through more
+                    efficient technology and processes that consume less energy. Electricity boosts efficiency in
+                    several cases. Additionally, "smart" technology that detects when energy is required and when it is
+                    not proving to be an aid in optimizing electricity generation and consumption thereby, reducing
+                    wastage of electricity.
+                    <br><br>
+                    4. Reduce the amount of carbon dioxide in the atmosphere. To compensate for emissions that are too
+                    costly or difficult to avoid, CO2 must be removed from the atmosphere and permanently stored. This
+                    can be accomplished using technologies that absorb CO2 directly from the air and hold it, preventing
+                    it from reentering the atmosphere. CO2 is already removed from the atmosphere by plants and soils,
+                    and certain land management practices can boost their capacity to absorb and store more CO2.
+                    <br><br>
+
+
+                    Existing technology can enable all of these methods, but in order to reach net-zero emissions
+                    worldwide by 2050, they must be adopted quickly and on a massive scale. This will necessitate new
+                    policies and investments, as well as careful consideration of the associated social and economic
+                    trade-offs. Government, industry, and individuals will all be required to participate and commit.
+                    More innovation can help to improve technology solutions while also lowering expenses.
+                    <br<br>>
+                </p>
+            </div>
+
+    </body>
+
+    <!-- article 1 end -->
+    <!-- Footer -->
+    <div class="container-fluid1">
+
+        <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+            <!-- ombre div  -->
+            <div id="container-fluid1"></div>
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+                            <!-- Links -->
+
+                            <h5>
+                                <a href="#!" class="text-white" style="text-decoration: none;">About us</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./privacy.html" class="text-white" style="text-decoration: none;">Privacy
+                                    Policy</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./tc.html" class="text-white" style="text-decoration: none;">Terms &
+                                    Conditions</a>
+                            </h5>
+
+                            <h5>
+                                <a href="" class="text-white" style="text-decoration: none;">Contact</a>
+                            </h5>
+                        </div>
+                        <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for
+                                        our newsletter for
+                                        the latest news and insights on sustainability and climate change
+                                    </label>
+
+                                    <div class="col p-4"> <input type="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter email"></div>
+                                    <div class="col p-4"><button type="submit"
+                                            class="btn btn-secondary">Subscribe</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+</body>
+<!-- <script src="BlogJs/Blog1.js"></script> -->
+
+</html>

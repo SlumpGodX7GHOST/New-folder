@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Home.css" media="screen">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Blog Page/css/main.css">
+
+    <style>
+        .top-right {
+            position: absolute;
+            background-color: white;
+            font-size: 1.5vh;
+            padding: 4px 7px 4px 7px;
+            /* top: 8px; */
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid;
+            box-shadow: 1px 1px 2px 1px #888888;
+            right: 0px;
+            /* color: black; */
+            /* box-shadow: 2px 2px red; */
+            /* text-shadow:1px 1px 2px rgb(17, 92, 232); */
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #817b7b;
+            z-index: 9;
+        }
+
+        #myPDF {
+            display: none;
+            width: 100%;
+            height: 975px;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: black;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <title>INSIGHTS</title>
+</head>
+
+<body>
+
+    <!-- form popup 1 -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container" name="myForm" id="report1" action="#">
+            <!--take data from the form in backend and  redirect to the pdf file according the id -->
+
+
+
+            <input type="text" placeholder="Enter Name" id="NameReport1" name="userName" required>
+
+
+            <input type="text" placeholder="Enter Mail" id="MailReport1" name="userMail" required>
+
+
+            <button type="submit" class="btn cancel" onclick="validate()">Submit</button>
+            <!--onclick="viewReport1()" -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- form popup end 1 -->
+    <!-- header div  -->
+    <header class="header-area">
+        <div class="header-container">
+
+            <!-- <div class="col" style="background-color: red;">sf</div> -->
+            <div class=" site-logo" d="logoid">
+                <a><img src="./images/Utopiic Registered logo-02.png" width="200vh">
+                </a>
+            </div>
+            <div class=" mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class=" site-nav-menu">
+                <ul class="primary-menu" style="padding-top: 1vh;">
+                    <li class="text-white">About us</li>
+                    <li class="text-white">Insights</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="container-fluid1"></div>
+    </header>
+    <!-- artile 1 -->
+
+    <body class="u-body u-xl-mode">
+        <header class="u-clearfix u-header u-header" id="sec-bafd">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <h1 class="u-text u-text-default u-text-1" style="padding-top:3.5% ;">Biggest Roadblocks To Being A
+                    Sustainable Brand</h1>
+        </header>
+
+        <section class="u-clearfix u-white u-section-1" id="carousel_fb95">
+
+            <div class="u-clearfix u-sheet u-sheet" style="padding-bottom: 8% ;">
+                <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div
+                                class="u-container-style u-layout-cell u-left-cell u-similar-fill u-size-27 u-layout-cell-1">
+
+                                <div class="u-container-layout u-container-layout-1">
+                                    <img class="u-absolute-hcenter-xs u-expanded u-image u-image-1"
+                                        src="images/img_220330070139.png">
+                                </div>
+                            </div>
+                            <div
+                                class="u-container-style u-layout-cell u-right-cell u-similar-fill u-size-33 u-layout-cell-2">
+                                <div class="u-container-layout u-valign-middle-md u-valign-top-xs u-container-layout-2">
+                                    <p class="u-text u-text-1">&nbsp;Covid-19 and climate change have exposed the need
+                                        for brands to turn to more sustainable solutions. It is commendable that
+                                        organizations globally are engaging and implementing programs and initiatives to
+                                        prioritize sustainability.
+                                        <br><br>
+                                        Brand Sustainability is a wonderful concept that has the potential to not only
+                                        drastically change the world but bring massive awareness to global, social, and
+                                        environmental issues. But being sustainable isn’t something that can be done
+                                        overnight. Even though many companies are convinced that becoming
+                                        environmentally friendly will erode competitiveness, they also fear that it will
+                                        add to costs and not deliver immediate financial benefits.
+                                        <br><br>
+                                        CEOs of big companies fear that switching to sustainability or developing
+                                        “green” products will place them at disadvantage. As it’ll be difficult for
+                                        suppliers to provide transparency or green inputs; new types of equipment will
+                                        be required for sustainable manufacturing and consumers will be reluctant to pay
+                                        more for eco-friendly products during a recession. Making it one of the reasons,
+                                        most executives treat the need to become sustainable as a corporate social
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="u-text u-text-2">
+                    As was foreseeable, the fight to save the planet has turned into a high-pitched battle between the
+                    government, companies, and consumer activists. It is difficult to bring all three of them on one
+                    single page. Government initiative towards sustainability is less. To solve this issue more and
+                    increasingly tougher regulations should be implemented on the government's part. Knowledge about
+                    sustainability, carbon emission, climate change is less among consumers, hence consumers should be
+                    educated so they will force businesses to become sustainable.
+<br><br>
+                    One of the biggest roadblocks for companies and brands that already invest in sustainability is the
+                    lack of systematic incentives or framework to engage in sustainability and the lack of available
+                    information. Companies that are reluctant to invest in sustainability state the lack of awareness of
+                    benefits and little to no understanding of the business case for small/ medium brands, not enough
+                    support services to guide and support implementation, and a lack of knowledge on environmental
+                    issues end up becoming roadblocks in switching to sustainability.
+                    <br><br>
+                    Another roadblock that companies often face is how to reduce or calculate waste and emissions. Most
+                    large companies induce suppliers to become environment-conscious by offering them incentives.
+                    Companies can detect waste sources by using tools like corporate carbon management, carbon and
+                    energy footprint analysis, and life-cycle assessment. Life-cycle analysis is very useful: It tracks
+                    the environmental inputs and outputs of whole value chains, from raw materials to product usage and
+                    returns. Managing workplace data can pose a roadblock for some companies.
+                    <br><br>
+                    Following a paperless approach is not as difficult as it seems. Sustainability has the potential to
+                    lead to innovative next-practice platforms. At the junction of the internet and energy management,
+                    one is forming. Through meters, sensors, and applications, companies will be able to optimize the
+                    energy use of computers, network devices, machinery, telephones, and building equipment by using
+                    digital technology to manage power generation, transmission, and distribution from all types of
+                    sources, as well as consumer demand. It will also allow for the creation of cross-industry platforms
+                    to manage the energy needs of cities, businesses, buildings, and individuals. Cisco, HP, Dell, and
+                    IBM are among the technology companies that are already investing in the development of these
+                    platforms.
+                    <br><br>
+                    According to Harvard Business’s research sustainability is a mother lode of organizations and
+                    technological innovations that yield both bottom-line and top-line returns. Becoming environmentally
+                    friendly, instead of increasing the costs, lowers them. As companies end up reducing the inputs they
+                    use. Moreover, the process generates additional revenues from better products or enables companies
+                    to create new products.
+                    <br><br>
+                    Many big companies have benefitted by switching to a sustainable approach. For Instance, in the
+                    early 1990s Hewlett- Packard( HP) understood that lead is toxic and the government would one day ban
+                    lead solders. Over the following decade, HR experimented with various alternatives for lead, and by
+                    2006 was successful in creating solders that are a blend of silver, tin, and copper and developed
+                    chemical agents to tackle the issue of oxidation and tarnishing during the soldering process. This
+                    HP was able to comply with the European Union’s Restrictions of Hazardous Substances Directive,
+                    which regulates the use of lead in electronic products, as soon as it took effect in 2006.
+                    <br><br>
+                    Contrary to popular perception sustainability can actually save companies money. What brands and
+                    companies need to understand about sustainability is that roadblocks to sustainability are just
+                    mental roadblocks. Deeply rooted myths that should be broken. If businesses adapt to green practices
+                    they can bring enormous changes. To summarize, sustainability is a big concern that affects more
+                    than just individual businesses. However, a number of significant corporations are implementing
+                    forward-thinking environmental practices, which is encouraging. It is definitely becoming evident
+                    that sustainability is a megatrend that simply isn’t going away!
+
+                </p>
+            </div>
+
+    </body>
+
+    <!-- article 1 end -->
+    <!-- Footer -->
+    <div class="container-fluid1">
+
+        <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+            <!-- ombre div  -->
+            <div id="container-fluid1"></div>
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+                            <!-- Links -->
+
+                            <h5>
+                                <a href="#!" class="text-white" style="text-decoration: none;">About us</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./privacy.html" class="text-white" style="text-decoration: none;">Privacy
+                                    Policy</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./tc.html" class="text-white" style="text-decoration: none;">Terms &
+                                    Conditions</a>
+                            </h5>
+
+                            <h5>
+                                <a href="" class="text-white" style="text-decoration: none;">Contact</a>
+                            </h5>
+                        </div>
+                        <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for
+                                        our newsletter for
+                                        the latest news and insights on sustainability and climate change
+                                    </label>
+
+                                    <div class="col p-4"> <input type="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter email"></div>
+                                    <div class="col p-4"><button type="submit"
+                                            class="btn btn-secondary">Subscribe</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+</body>
+<!-- <script src="BlogJs/Blog1.js"></script> -->
+
+</html>

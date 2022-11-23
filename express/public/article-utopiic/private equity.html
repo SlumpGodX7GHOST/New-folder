@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Home.css" media="screen">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Blog Page/css/main.css">
+
+    <style>
+        .top-right {
+            position: absolute;
+            background-color: white;
+            font-size: 1.5vh;
+            padding: 4px 7px 4px 7px;
+            /* top: 8px; */
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid;
+            box-shadow: 1px 1px 2px 1px #888888;
+            right: 0px;
+            /* color: black; */
+            /* box-shadow: 2px 2px red; */
+            /* text-shadow:1px 1px 2px rgb(17, 92, 232); */
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #817b7b;
+            z-index: 9;
+        }
+
+        #myPDF {
+            display: none;
+            width: 100%;
+            height: 975px;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: black;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <title>INSIGHTS</title>
+</head>
+
+<body>
+
+    <!-- form popup 1 -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container" name="myForm" id="report1" action="#">
+            <!--take data from the form in backend and  redirect to the pdf file according the id -->
+
+
+
+            <input type="text" placeholder="Enter Name" id="NameReport1" name="userName" required>
+
+
+            <input type="text" placeholder="Enter Mail" id="MailReport1" name="userMail" required>
+
+
+            <button type="submit" class="btn cancel" onclick="validate()">Submit</button>
+            <!--onclick="viewReport1()" -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- form popup end 1 -->
+    <!-- header div  -->
+    <header class="header-area">
+        <div class="header-container">
+
+            <!-- <div class="col" style="background-color: red;">sf</div> -->
+            <div class=" site-logo" d="logoid">
+                <a><img src="./images/Utopiic Registered logo-02.png" width="200vh">
+                </a>
+            </div>
+            <div class=" mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class=" site-nav-menu">
+                <ul class="primary-menu" style="padding-top: 1vh;">
+                    <li class="text-white">About us</li>
+                    <li class="text-white">Insights</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="container-fluid1"></div>
+    </header>
+    <!-- artile 1 -->
+
+    <body class="u-body u-xl-mode">
+        <header class="u-clearfix u-header u-header" id="sec-bafd">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <h1 class="u-text u-text-default u-text-1" style="padding-top:3.5% ;">Private Equity Firms Promoting
+                    Fossil Fuel Consumption</h1>
+        </header>
+
+        <section class="u-clearfix u-white u-section-1" id="carousel_fb95">
+
+            <div class="u-clearfix u-sheet u-sheet" style="padding-bottom: 8% ;">
+                <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div
+                                class="u-container-style u-layout-cell u-left-cell u-similar-fill u-size-27 u-layout-cell-1">
+
+                                <div class="u-container-layout u-container-layout-1">
+                                    <img class="u-absolute-hcenter-xs u-expanded u-image u-image-1"
+                                        src="images/img_220420113212.jpg">
+                                </div>
+                            </div>
+                            <div
+                                class="u-container-style u-layout-cell u-right-cell u-similar-fill u-size-33 u-layout-cell-2">
+                                <div class="u-container-layout u-valign-middle-md u-valign-top-xs u-container-layout-2">
+                                    <p class="u-text u-text-1">&nbsp;
+                                        Private equity firms, a type of investor with a laser-like focus on maximizing
+                                        profits, have stepped into the fray as the oil and gas business faces turmoil
+                                        due to global price swings and catastrophic climate change.
+                                        <br><br>
+                                        According to a recent analysis by the New York Times, the private equity
+                                        industry has invested at least $1.1 trillion in the energy sector since 2010,
+                                        more than double the total market value of the world's three largest energy
+                                        companies, Exxon, Chevron, and Royal Dutch Shell. According to data from
+                                        Pitchbook, an investment tracking website, and a new analysis by the Private
+                                        Equity Stakeholder Project, a group that advocates for more transparency in
+                                        private equity deals, the vast majority of those investments were made in fossil
+                                        fuels.
+                                        <br><br>
+                                        According to Pitchbook data, just approximately 12% of private equity investment
+                                        in the energy sector has gone into renewable energy, such as solar or wind,
+                                        since 2010, even though those investments have increased at a quicker rate.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="u-text u-text-2">
+                    Private equity investors are taking advantage of the fact that the oil industry is receiving
+                    pressure from environmental groups, courts, and even their own shareholders to transition away from
+                    fossil fuels, which are the primary cause of climate change. As a result, many oil corporations have
+                    decided to sell off their dirtiest properties, which have frequently landed up in the hands of
+                    private equity groups.
+<br><br>
+                    According to an investigation by the corporate accountability nonprofits LittleSis and the Private
+                    Equity Stakeholder Project, oil and gas pipelines, coal plants, and offshore drilling sites linked
+                    to Indigenous land violations, toxic leaks, and deadly air pollution are among the dirty energy
+                    projects financed by some of the country's largest private equity firms.
+                    <br><br>
+                    Funds and investors buy and reorganize enterprises, including startups, struggling businesses, and
+                    real estate, in an opaque type of financing away from public markets known as private equity.
+                    Globally, the business manages about $7 trillion for high-net-worth individuals and institutional
+                    investors such as mutual funds, hedge funds, endowments, and pension funds, investing in everything
+                    from retail to healthcare to jails and weaponry.
+                    <br><br>
+                    Some of that money goes towards fossil-fuel projects that emit greenhouse gases, which contribute to
+                    global warming. Drought, harsh temperatures, and hurricanes are all closely linked to rising air and
+                    ocean temperatures.
+                    <br><br>
+                    Private equity businesses, unlike banks and other public trade enterprises, are exempted from most
+                    financial transparency rules, making asset tracking extremely difficult. It implies that people with
+                    pension funds invested in private equity funds, such as firefighters and teachers, have no way of
+                    knowing if their money is funding coal plants, oil wells, or solar farms.
+                    <br><br>
+                    According to the investigations found by The Private Equity’s Dirty Dozen report,
+                    <br><br>
+                    The Carlyle Group, one of the world's largest private equity firms, owns a stake in NGP Energy
+                    Capital, which has its own large portfolio focused on fracking and drilling in states such as Texas,
+                    Wyoming, and Colorado. Carlyle, which just started a goal of net-zero emissions by 2050, is also
+                    collaborating on at least $4 billion in equity and financing arrangements with Hilcorp Energy, a big
+                    methane emitter with a history of offshore disasters in Alaska and the Gulf of Mexico. (Methane
+                    traps more than 25 times the heat in the atmosphere than carbon dioxide, accounting for nearly a
+                    quarter of current global warming.)
+                    <br><br>
+                    The Coastal Gaslink pipeline in Canada, a 400-mile, multibillion-dollar infrastructure project that
+                    will transport fracked gas to a Pacific coast port for export to Asia, is controlled by Kohlberg
+                    Kravis Roberts & Co (KKR). The Wet'suwet'en Nation's hereditary leaders have called for police to
+                    clear protesters and blockades. Henry Kravis, one of the company's co-founders, gave $1 million to
+                    Trump's inauguration fund in 2017.
+                    <br><br>
+                    The General James Gavin power station in Ohio is co-owned by Blackstone and ArcLight, the world's
+                    largest private equity business with $731 billion in assets. Blackstone also has large ownership in
+                    the company that operates the Dakota Access pipeline, the oil infrastructure project that sparked
+                    the Standing Rock protest camp, where law enforcement brutalized Indigenous water protectors.
+                    <br><br>
+                    The top ten private equity companies, including Blackstone, KKR, and Carlyle, invested in energy
+                    since 2010, as per the Private Equity Stakeholder Project. According to the research, oil, gas, and
+                    coal make up almost 80% of existing holdings. Despite the fact that many of those companies boasted
+                    about their long-term investments, this was not the case.
+                    <br><br>
+                    Alyssa Giachino, Pesp’s climate director and co-author of the report, said: “While communities have
+                    shouldered the harms from fossil fuel investments, private equity firms have built vast wealth. Many
+                    firms have adopted rhetoric around sustainability, but have yet to provide transparency on their
+                    holdings and impacts.”
+                    <br><br>
+                    In recent decades, private equity firms have grown in strength and secrecy as an investment force.
+                    They usually combine large sums of money from rich or institutional investors to invest directly in
+                    businesses, which are often in crisis and unable to raise funding through more traditional means. It
+                    might be difficult to acquire a complete picture of a company's holdings or climate because the
+                    corporations are only required to publish limited information.
+                    <br><br>
+                    The findings have reignited calls for more transparency in the burgeoning private equity industry so
+                    that people suffering from hazardous pollution and harsh weather can track the money that is fueling
+                    their suffering.
+                    <br><br>
+                    However, there are some indications that things are changing. Private equity investment in
+                    renewables has grown at almost three times the rate of investment in fossil fuels since 2010,
+                    according to Pitchbook data, albeit from a significantly smaller base. Last year, a drop in oil
+                    demand caused by the Covid-19 epidemic resulted in the fewest fossil fuel agreements among the top
+                    10 private equity firms since 2011, while investments in renewable energy companies increased.
+                    <br><br>
+                    Rising oil and gas prices, on the other hand, may assist renewable energy projects to become even
+                    more competitive with fossil fuel projects, as higher power prices may help boost demand for new
+                    wind or solar projects among utilities and others seeking to protect themselves from market swings.
+
+
+
+                </p>
+            </div>
+
+    </body>
+
+    <!-- article 1 end -->
+    <!-- Footer -->
+    <div class="container-fluid1">
+
+        <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+            <!-- ombre div  -->
+            <div id="container-fluid1"></div>
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+                            <!-- Links -->
+
+                            <h5>
+                                <a href="#!" class="text-white" style="text-decoration: none;">About us</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./privacy.html" class="text-white" style="text-decoration: none;">Privacy
+                                    Policy</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./tc.html" class="text-white" style="text-decoration: none;">Terms &
+                                    Conditions</a>
+                            </h5>
+
+                            <h5>
+                                <a href="" class="text-white" style="text-decoration: none;">Contact</a>
+                            </h5>
+                        </div>
+                        <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for
+                                        our newsletter for
+                                        the latest news and insights on sustainability and climate change
+                                    </label>
+
+                                    <div class="col p-4"> <input type="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter email"></div>
+                                    <div class="col p-4"><button type="submit"
+                                            class="btn btn-secondary">Subscribe</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+</body>
+<!-- <script src="BlogJs/Blog1.js"></script> -->
+
+</html>

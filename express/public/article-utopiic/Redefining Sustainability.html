@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Home.css" media="screen">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Blog Page/css/main.css">
+
+    <style>
+        .top-right {
+            position: absolute;
+            background-color: white;
+            font-size: 1.5vh;
+            padding: 4px 7px 4px 7px;
+            /* top: 8px; */
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid;
+            box-shadow: 1px 1px 2px 1px #888888;
+            right: 0px;
+            /* color: black; */
+            /* box-shadow: 2px 2px red; */
+            /* text-shadow:1px 1px 2px rgb(17, 92, 232); */
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #817b7b;
+            z-index: 9;
+        }
+
+        #myPDF {
+            display: none;
+            width: 100%;
+            height: 975px;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: black;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <title>INSIGHTS</title>
+</head>
+
+<body>
+
+    <!-- form popup 1 -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container" name="myForm" id="report1" action="#">
+            <!--take data from the form in backend and  redirect to the pdf file according the id -->
+
+
+
+            <input type="text" placeholder="Enter Name" id="NameReport1" name="userName" required>
+
+
+            <input type="text" placeholder="Enter Mail" id="MailReport1" name="userMail" required>
+
+
+            <button type="submit" class="btn cancel" onclick="validate()">Submit</button>
+            <!--onclick="viewReport1()" -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- form popup end 1 -->
+    <!-- header div  -->
+    <header class="header-area">
+        <div class="header-container">
+
+            <!-- <div class="col" style="background-color: red;">sf</div> -->
+            <div class=" site-logo" d="logoid">
+                <a><img src="./images/Utopiic Registered logo-02.png" width="200vh">
+                </a>
+            </div>
+            <div class=" mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class=" site-nav-menu">
+                <ul class="primary-menu" style="padding-top: 1vh;">
+                    <li class="text-white">About us</li>
+                    <li class="text-white">Insights</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="container-fluid1"></div>
+    </header>
+    <!-- artile 1 -->
+
+    <body class="u-body u-xl-mode">
+        <header class="u-clearfix u-header u-header" id="sec-bafd">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <h1 class="u-text u-text-default u-text-1" style="padding-top:3.5% ;">Redefining Sustainability</h1>
+        </header>
+
+        <section class="u-clearfix u-white u-section-1" id="carousel_fb95">
+
+            <div class="u-clearfix u-sheet u-sheet" style="padding-bottom: 8% ;">
+                <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div
+                                class="u-container-style u-layout-cell u-left-cell u-similar-fill u-size-27 u-layout-cell-1">
+
+                                <div class="u-container-layout u-container-layout-1">
+                                    <img class="u-absolute-hcenter-xs u-expanded u-image u-image-1"
+                                        src="images/20220553022553.jpg">
+                                </div>
+                            </div>
+                            <div
+                                class="u-container-style u-layout-cell u-right-cell u-similar-fill u-size-33 u-layout-cell-2">
+                                <div class="u-container-layout u-valign-middle-md u-valign-top-xs u-container-layout-2">
+                                    <p class="u-text u-text-1">&nbsp;Sustainability is not just ensuring energy security
+                                        and combating global warming, it is a much wider concept. While this approach is
+                                        useful for tackling today's pressing issues, sustainability requires a more
+                                        holistic approach. Let's go back to the beginning of what it means to be
+                                        sustainable, and remember that its historic sense may be more appealing to some
+                                        than its more contemporary environmental connotation. The call for environmental
+                                        awareness and conservation has dominated politics, the media, and, more
+                                        recently, social media in the last few decades. The term ‘sustainability’ has
+                                        become synonymous with the concept of a greener future.
+                                        <br><br>
+                                    <h4>What is Sustainability?</h4>
+                                    <br><br>
+                                    Sustainability entails addressing our demands without jeopardizing future
+                                    generations' ability to meet their own. We require social and economic resources
+                                    in addition to natural resources. Environmentalism isn't the only aspect of
+                                    sustainability. Concerns for social fairness and economic development are found
+                                    in most definitions of sustainability. While the concept of sustainability is a
+                                    novel one, the movement as a whole has origins in social justice,
+                                    conservationism, internationalism, and other long-standing causes. Many of these
+                                    ideas had come together by the end of the twentieth century in the push for
+                                    sustainable development.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="u-text u-text-2">
+                    Throughout contemporary history, sustainability has been a major challenge for humankind, spanning
+                    the century-long worry of securing a sustainable energy supply and the hunt for sustainable
+                    transportation. Horse excrement was a big issue for city people in the late nineteenth century. With
+                    100,000 to 200,000 horses working as
+<br><br>
+                    transportation in New York City, the city's streets began to see increasing piles of horse dung (up
+                    to 60 feet), bringing negative health and environmental repercussions for the city's residents. Not
+                    only did the horses generate waste faster than the city could clean it up, but they also cost the
+                    city enormously in terms of revenue.
+                    <br><br>
+                    Technology, of course, came to the rescue in the end. Public-produced automobiles quickly displaced
+                    mass defecation, protecting the city from serious environmental health risks. Automobiles were
+                    thought to be the answer to the horse-dung problem. Nonetheless, it's interesting to draw a
+                    comparison between the environmental and economic consequences of transportation a century ago and
+                    the consequences that automobiles, the ‘solution,’ have now. Our quick-and-easy-solution way of life
+                    appears to suggest that we haven't changed much since the days of horse manure: we're still
+                    expecting and hoping for a magical technology to fix our issues. However, we do have the technology
+                    to save the day, in a sense. Sustainable purifying facilities, efficient electric cars, renewable
+                    energy, and recycling materials are all technologies that already exist. The underlying issue is
+                    that we have largely remained silent while the consequences of our decisions have disrupted the
+                    environment. As a result, as much as it is about the actual decisions we make, sustainability is
+                    about having the ability to reflect on and assess our consequences.
+
+                    <br><br>
+
+                   <h4> Over a couple of previous years, few trends have been apparent:</h4>
+                   <br><br>
+                    We are currently using the resources of 1.5 planets at our current rate of population and economic
+                    growth. A higher rate of acceleration will necessitate the use of even more resources that we don't
+                    have – or won't have for long.
+                    Over the last few years, the public's patience with corporate self-interest has been severely
+                    tested, and it has been dwindling to all-time lows. Profit at the expense of the environment or
+                    society is becoming an increasingly costly and unsustainable proposition for top management teams in
+                    an era of rising transparency, where corporate misdeeds are likely to be recognized and held
+                    accountable.<br>
+                    Consumers all across the world are growing more conscious of the environmental and social
+                    consequences of the things they buy. While the majority of customers have yet to indicate that they
+                    are willing to pay extra for environmentally friendly products, they are increasingly considering
+                    these factors when deciding between products with similar features and prices. As more people join
+                    the middle class in emerging nations and more awareness spreads, this preoccupation is expected to
+                    grow.<br>
+                    As a result, it's time to revisit Brundtland's legacy and redefine what it means to engage in the
+                    sustainable activity:
+                    <br><br>
+
+
+                    1. Societal influence is described as a measure of society's impact on the firm in terms of the social
+                    contract and stakeholder power.<br><br>
+                   2.  Environmental Impact is defined as the impact of a company's operations on the geophysical
+                    environment.<br><br>
+                   3.  Corporate culture is the relationship between the corporation and its internal stakeholders,
+                    primarily employees, and all facets of that connection.<br><br>
+                   4.  Lastly, Finance is inferred as a reasonable return for the level of risk taken or investment made.
+                    <br><br>
+                    All of these things are required to ensure not only long-term sustainability but also long-term
+                    progress. Furthermore, the balance between them is critical. These four fundamental characteristics
+                    of sustainability must be examined, and they are all equally vital. Sustainability has also been a
+                    part of Buddhist thought since the time of karma. We are yet to fully execute the concept, despite
+                    its extensive philosophical history. That must change. If we want to overcome anything from the
+                    noxious odor of manure to the severe and unpredictable climate that will affect our entire globe, we
+                    must embrace sustainability. Our energy and climate crises should not be the primary context in
+                    which we discuss sustainability. Rather, it's a philosophy and notion that may be applied to a wide
+                    range of aspects of life and society. Although we urgently want innovative and effective technology
+                    to save us from today's ‘horse manure,’ We must also begin to evaluate the full consequences of how
+                    we think about and react to our decisions.
+                </p>
+            </div>
+
+    </body>
+
+    <!-- article 1 end -->
+    <!-- Footer -->
+    <div class="container-fluid1">
+
+        <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+            <!-- ombre div  -->
+            <div id="container-fluid1"></div>
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+                            <!-- Links -->
+
+                            <h5>
+                                <a href="#!" class="text-white" style="text-decoration: none;">About us</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./privacy.html" class="text-white" style="text-decoration: none;">Privacy
+                                    Policy</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./tc.html" class="text-white" style="text-decoration: none;">Terms &
+                                    Conditions</a>
+                            </h5>
+
+                            <h5>
+                                <a href="" class="text-white" style="text-decoration: none;">Contact</a>
+                            </h5>
+                        </div>
+                        <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for
+                                        our newsletter for
+                                        the latest news and insights on sustainability and climate change
+                                    </label>
+
+                                    <div class="col p-4"> <input type="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter email"></div>
+                                    <div class="col p-4"><button type="submit"
+                                            class="btn btn-secondary">Subscribe</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+</body>
+<!-- <script src="BlogJs/Blog1.js"></script> -->
+
+</html>

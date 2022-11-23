@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Home.css" media="screen">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Blog Page/css/main.css">
+
+    <style>
+        .top-right {
+            position: absolute;
+            background-color: white;
+            font-size: 1.5vh;
+            padding: 4px 7px 4px 7px;
+            /* top: 8px; */
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid;
+            box-shadow: 1px 1px 2px 1px #888888;
+            right: 0px;
+            /* color: black; */
+            /* box-shadow: 2px 2px red; */
+            /* text-shadow:1px 1px 2px rgb(17, 92, 232); */
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #817b7b;
+            z-index: 9;
+        }
+
+        #myPDF {
+            display: none;
+            width: 100%;
+            height: 975px;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: black;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <title>INSIGHTS</title>
+</head>
+
+<body>
+
+    <!-- form popup 1 -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container" name="myForm" id="report1" action="#">
+            <!--take data from the form in backend and  redirect to the pdf file according the id -->
+
+
+
+            <input type="text" placeholder="Enter Name" id="NameReport1" name="userName" required>
+
+
+            <input type="text" placeholder="Enter Mail" id="MailReport1" name="userMail" required>
+
+
+            <button type="submit" class="btn cancel" onclick="validate()">Submit</button>
+            <!--onclick="viewReport1()" -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- form popup end 1 -->
+    <!-- header div  -->
+    <header class="header-area">
+        <div class="header-container">
+
+            <!-- <div class="col" style="background-color: red;">sf</div> -->
+            <div class=" site-logo" d="logoid">
+                <a><img src="./images/Utopiic Registered logo-02.png" width="200vh">
+                </a>
+            </div>
+            <div class=" mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class=" site-nav-menu">
+                <ul class="primary-menu" style="padding-top: 1vh;">
+                    <li class="text-white">About us</li>
+                    <li class="text-white">Insights</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="container-fluid1"></div>
+    </header>
+    <!-- artile 1 -->
+
+    <body class="u-body u-xl-mode">
+        <header class="u-clearfix u-header u-header" id="sec-bafd">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <h1 class="u-text u-text-default u-text-1" style="padding-top:3.5% ;">The Advent of Space Garbage Can
+                </h1>
+        </header>
+
+        <section class="u-clearfix u-white u-section-1" id="carousel_fb95">
+
+            <div class="u-clearfix u-sheet u-sheet" style="padding-bottom: 8% ;">
+                <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div
+                                class="u-container-style u-layout-cell u-left-cell u-similar-fill u-size-27 u-layout-cell-1">
+
+                                <div class="u-container-layout u-container-layout-1">
+                                    <img class="u-absolute-hcenter-xs u-expanded u-image u-image-1"
+                                        src="images/img_220520010217.jpg">
+                                </div>
+                            </div>
+                            <div
+                                class="u-container-style u-layout-cell u-right-cell u-similar-fill u-size-33 u-layout-cell-2">
+                                <div class="u-container-layout u-valign-middle-md u-valign-top-xs u-container-layout-2">
+                                    <p class="u-text u-text-1">&nbsp;In the last fifty-five years, the space surrounding
+                                        the Earth has gone from being almost devoid of junk to being clogged with
+                                        man-made items that threaten launches, active satellites, and the International
+                                        Space Station (ISS). According to NASA, more than 21,000 particles the size of a
+                                        softball were being tracked in 2013, with an estimated 500,000 bits the size of
+                                        a marble believed to exist. Over 100 million much smaller things, as little as a
+                                        speck of paint, are impossible to detect or track. Around 1,100 active
+                                        satellites make up around 6% of all Earth-orbiting objects; the remainder is
+                                        garbage. Humans have been exploring space for as long as we can remember,
+                                        leading to irreparable consequences. Thousands of dead satellites orbit our
+                                        globe, along with bits of debris from all the rockets we have fired throughout
+                                        the years. This could become a problem in the future.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="u-text u-text-2">
+                   <h4>WHAT IS SPACE DEBRIS OR SPACE JUNK</h4>
+<br><br>
+                    Any piece of machinery or debris left by humans in space is known as space junk or space debris. It
+                    can refer to large objects like failed or abandoned satellites left in orbit after the mission ends
+                    or tiny items such as fragments of debris or paint flecks that have fallen from a rocket. There is
+                    also some human-made junk even on the Moon. Debris can also be produced by a space explosion or when
+                    countries conduct missile tests to destroy their satellites. Aside from Russia, China, the US, and
+                    India have all shot down satellites, resulting in space debris. Due to the high speeds at which
+                    space junk orbits the globe - roughly 15,700 miles per hour (25,265 kilometers per hour) in low
+                    Earth orbit - it might inflict considerable damage to a satellite or spacecraft in the event of a
+                    collision. With the deployment of more satellites from firms like Elon Musk's Starlink and OneWeb
+                    satellite constellations, space debris in the vicinity of Earth will undoubtedly increase. According
+                    to NASA, In 1996, debris from a French rocket that had exploded a decade earlier struck and
+                    destroyed a French satellite. A derelict Russian spacecraft collided with and destroyed a functional
+                    US Iridium commercial satellite on February 10, 2009. More than 2,300 pieces of massive, trackable
+                    debris and many smaller pieces of debris were added to the inventory of space junk as a result of
+                    the collision. China's anti-satellite test in 2007, which used a missile to destroy an old weather
+                    satellite, added about 3,500 pieces of massive, trackable debris to the debris problem, as well as
+                    many smaller pieces.
+                    <br><br>
+                   <h4> CONSEQUENCES OF SPACE JUNK</h4>
+                    <br><br>
+                    <h4>In Space</h4>
+                    <br><br>
+                    The proliferation of orbital debris causes concerns in space as well as on Earth. If the projected
+                    route of a tracked debris object intersects with the path of a rocket launch, the launch may be
+                    delayed. A three-minute delay in the launch of an Indian rocket carrying satellites for four foreign
+                    countries in late June 2014 was one such incident. Maneuverable satellites can be relocated to
+                    escape orbital debris. In the year 2010, more than 100 similar moves were documented. For example,
+                    debris tracking revealed in April 2012 that a defunct Russian satellite and NASA's Fermi Gamma-Ray
+                    Telescope will cross paths within 30 milliseconds of each other. The thrusters aboard Fermi were
+                    used for one second, and the debris missed Fermi by 9.7 kilometers (6 mi). Fermi was out of
+                    commission for one hour due to the avoidance maneuver.
+                    <br><br>
+                    The Joint Space Operations Center (JSpOC) at Vandenberg Air Force Base keeps track of over 800
+                    maneuverable satellites and compares their routes to orbital debris collected by the Space
+                    Surveillance Network. When the JSpOC detects a possible collision, they alert NASA, who then
+                    notifies the satellite owners. A total of twenty-nine satellite collision avoidance maneuvers were
+                    undertaken or aided by NASA in 2013. NASA tracked objects that could collide with a space shuttle
+                    from 1988 to 2011. They looked for items whose routes would lead them into a maneuver box enclosing
+                    the shuttle that was 2km x 5km x 2km (1.25 mi x 3 mi x 1.25 km). If a collision was foreseen, the
+                    shuttle would maneuver to avoid it unless it would interfere with "either major payload or mission
+                    objectives." Nine cataloged objects entered the maneuver box of a space shuttle between September
+                    1988 and February 1997. In just four of those instances did the shuttle perform a collision
+                    avoidance maneuver; in the other five, the maneuver would have interfered with its mission. The
+                    first of these maneuvers, carried out in September 1991, avoided colliding with a spent upper stage
+                    rocket body from the Soviet Cosmos 955 satellite launch in 1977.
+                    <br><br>
+                    The International Space Station, too, has had to avoid space junk. The station's livable
+                    compartments are protected from debris up to 1 cm (0.4 in. ), but smaller particles can harm other
+                    parts of the station, such as the solar panels. In July 2014, space debris tore a 30 cm (12 in.)
+                    long rip in a radiator panel's cover sheet. The ISS has performed nineteen collision avoidance
+                    maneuvers since 1999. In March and April 2014, two such movements were performed within three weeks
+                    to escape debris from two distinct spacecraft. The ISS avoided debris from the Cosmos 2251 satellite
+                    on October 27, 2014. The crew aboard the ISS took refuge in the associated Soyuz crew transportation
+                    vessel on three previous occasions when the approach of space debris was discovered too late to
+                    undertake an avoidance maneuver. Despite these safeguards, numerous components of the ISS have been
+                    damaged, including thermal radiators, solar panels, and a window.
+                    <br><br>
+                   <h4> On the Ground</h4>
+                   <br><br>
+                    Space debris that falls out of orbit burns up in the atmosphere, but larger fragments can reach the
+                    earth intact or in chunks. Every week, on average, one uncontrolled re-entry of a spacecraft or
+                    rocket body weighing around 2,000 kg (4,400 lbs) happens. 10–40% of their mass reaches the ground in
+                    these cases. Because water covers 70% of the Earth's surface, the majority of the trash ends up in
+                    the oceans. Several huge pieces, however, have landed on land. The unplanned re-entry of the US
+                    space station Skylab in July 1979 was one famous incident. As it streaked through the atmosphere,
+                    the 76,000 kg (84 tonnes) object disintegrated. As the fragments approached the earth, residents in
+                    two locations in southwestern Australia heard sonic booms. Debris was strewn across 200 km (125 mi)
+                    by 1,000 km (620 mi) area, and more than 500 pieces weighing a total of 20,000 kg (22 tons) were
+                    found in the Australian Outback. Due to the increasing potential of collision with and damage to
+                    functional satellites, the building of space junk poses a particularly catastrophic threat to
+                    humanity's future in space exploration. It may potentially have negative consequences for the
+                    Earth's ecosystem.
+                    <br><br>
+                    <h4>CONTROLLING SPACE DEBRIS</h4>
+                    <br><br>
+                    The plethora of methods being developed to control space trash can sound more science fiction than
+                    reality. The electrodynamic tether is an electronic space whip that runs six football fields long
+                    and is being tested by JAXA, Japan's space agency (EDT). The roughly 2,300-foot-long electric cable
+                    is capped by a 44-pound weight. It's designed to push trash out of orbit and burn up in Earth's
+                    atmosphere after it's deployed. That is by no means the only choice. To safely pare down the
+                    expanding debris cloud, other concepts include huge magnets, harpoons, and nets. Many countries are
+                    approaching the problem from the other side of the equation, ensuring that any future man-made
+                    orbiters dispatched to soar beyond Earth's surface have a proper end-of-life plan in place to
+                    restrict the expanding cloud of garbage that engulfs our home planet. The United Nations has
+                    requested that all firms de-orbit their satellites within 25 years of their mission's completion.
+                    However, because satellites can (and do) fail, this is difficult to enforce. Several companies
+                    throughout the world have devised unique strategies to address this issue. Dead satellites are
+                    removed from orbit and dragged back into the atmosphere, where they will burn up. Using a harpoon to
+                    capture a satellite, catching it in a big net, using magnets to capture it, or even using lasers to
+                    heat the satellite and increase its atmospheric drag, causing it to fall out of orbit are all
+                    possibilities.
+
+                </p>
+            </div>
+
+    </body>
+
+    <!-- article 1 end -->
+    <!-- Footer -->
+    <div class="container-fluid1">
+
+        <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+            <!-- ombre div  -->
+            <div id="container-fluid1"></div>
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+                            <!-- Links -->
+
+                            <h5>
+                                <a href="#!" class="text-white" style="text-decoration: none;">About us</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./privacy.html" class="text-white" style="text-decoration: none;">Privacy
+                                    Policy</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./tc.html" class="text-white" style="text-decoration: none;">Terms &
+                                    Conditions</a>
+                            </h5>
+
+                            <h5>
+                                <a href="" class="text-white" style="text-decoration: none;">Contact</a>
+                            </h5>
+                        </div>
+                        <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for
+                                        our newsletter for
+                                        the latest news and insights on sustainability and climate change
+                                    </label>
+
+                                    <div class="col p-4"> <input type="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter email"></div>
+                                    <div class="col p-4"><button type="submit"
+                                            class="btn btn-secondary">Subscribe</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+</body>
+<!-- <script src="BlogJs/Blog1.js"></script> -->
+
+</html>

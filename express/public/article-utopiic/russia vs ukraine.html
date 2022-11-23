@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Home.css" media="screen">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Blog Page/css/main.css">
+
+    <style>
+        .top-right {
+            position: absolute;
+            background-color: white;
+            font-size: 1.5vh;
+            padding: 4px 7px 4px 7px;
+            /* top: 8px; */
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid;
+            box-shadow: 1px 1px 2px 1px #888888;
+            right: 0px;
+            /* color: black; */
+            /* box-shadow: 2px 2px red; */
+            /* text-shadow:1px 1px 2px rgb(17, 92, 232); */
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #817b7b;
+            z-index: 9;
+        }
+
+        #myPDF {
+            display: none;
+            width: 100%;
+            height: 975px;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: black;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <title>INSIGHTS</title>
+</head>
+
+<body>
+
+    <!-- form popup 1 -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container" name="myForm" id="report1" action="#">
+            <!--take data from the form in backend and  redirect to the pdf file according the id -->
+
+
+
+            <input type="text" placeholder="Enter Name" id="NameReport1" name="userName" required>
+
+
+            <input type="text" placeholder="Enter Mail" id="MailReport1" name="userMail" required>
+
+
+            <button type="submit" class="btn cancel" onclick="validate()">Submit</button>
+            <!--onclick="viewReport1()" -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- form popup end 1 -->
+    <!-- header div  -->
+    <header class="header-area">
+        <div class="header-container">
+
+            <!-- <div class="col" style="background-color: red;">sf</div> -->
+            <div class=" site-logo" d="logoid">
+                <a><img src="./images/Utopiic Registered logo-02.png" width="200vh">
+                </a>
+            </div>
+            <div class=" mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class=" site-nav-menu">
+                <ul class="primary-menu" style="padding-top: 1vh;">
+                    <li class="text-white">About us</li>
+                    <li class="text-white">Insights</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="container-fluid1"></div>
+    </header>
+    <!-- artile 1 -->
+
+    <body class="u-body u-xl-mode">
+        <header class="u-clearfix u-header u-header" id="sec-bafd">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <h1 class="u-text u-text-default u-text-1" style="padding-top:3.5% ;">Russia Vs Ukraine</h1>
+        </header>
+
+        <section class="u-clearfix u-white u-section-1" id="carousel_fb95">
+
+            <div class="u-clearfix u-sheet u-sheet" style="padding-bottom: 8% ;">
+                <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div
+                                class="u-container-style u-layout-cell u-left-cell u-similar-fill u-size-27 u-layout-cell-1">
+
+                                <div class="u-container-layout u-container-layout-1">
+                                    <img class="u-absolute-hcenter-xs u-expanded u-image u-image-1"
+                                        src="images/img_220427053811.png">
+                                </div>
+                            </div>
+                            <div
+                                class="u-container-style u-layout-cell u-right-cell u-similar-fill u-size-33 u-layout-cell-2">
+                                <div class="u-container-layout u-valign-middle-md u-valign-top-xs u-container-layout-2">
+                                    <p class="u-text u-text-1">&nbsp;War's environmental impact begins far before the
+                                        conflict itself. The cost of constructing and maintaining military troops is
+                                        enormous. Common metals, rare earth elements, water, and hydrocarbons are
+                                        examples. Maintaining military readiness necessitates training, which requires
+                                        funding. Military vehicles, planes, warships, buildings, and infrastructure all
+                                        require an energy source which is often oil and unfortunately has low
+                                        efficiency. The CO2e emissions of the world's largest militaries exceed those of
+                                        several countries combined.
+                                        <br><br>
+                                        As Russian soldiers intensified their attack on Ukrainian cities, escalating a
+                                        long-simmering conflict into a full-fledged invasion, observers warned that the
+                                        latest round of violence could result in much more long-term environmental harm.
+                                        Millions of residents have been forced to evacuate their homes as a result of
+                                        Vladimir Putin's attack on Ukraine, with thousands more trapped under Russian
+                                        shelling in cities such as Mariupol. The battle is also causing new
+                                        environmental concerns, which may increase the war's human toll. Some of these
+                                        environmental dangers, such as a radioactive spill from one of Ukraine's nuclear
+                                        power facilities, might have rapid and catastrophic implications. Others, such
+                                        as carcinogenic dust from bombed buildings, provide long-term dangers with even
+                                        more long-term consequences.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="u-text u-text-2">
+                    After some critical thinking over 1,000 organizations and individuals from over 75 countries signed
+                    an open letter expressing their support for the Ukrainian people and their concern about the war's
+                    environmental and human toll. Toxic elements are released into the air, water, and soil as a result
+                    of crumpled structures, faulty sanitation systems, ruptured pipes, and damaged industrial facilities
+                    such as fuel and chemical storage sites. Experts fear that the war will escalate, with Russia
+                    targeting hydroelectric dams, toxic mine tailings dams, and hazardous waste storage sites in
+                    Ukraine.
+<br><br>
+                    <h4>Ecological Devastation</h4>
+                    <br>
+                    The highly industrialized landscape of Ukraine makes the conflict one of the most perilous in terms
+                    of environmental consequences, including the threat of a nuclear meltdown. After an attack by
+                    Russian soldiers, a fire broke out at Europe's largest nuclear power plant, Zaporizhzhia.
+                    <br><br>
+                    Experts say that while a radiation leak was not immediately detected, a strike on the site could be
+                    disastrous, according to international officials. A Russian seizure of the plant, according to
+                    Nickolai Denisov, deputy director of ZOI Environmental Network, a Swiss charity that provides
+                    environmental analysis, might disrupt vital monitoring systems and restrict crew access to the
+                    plant, increasing the risk of accidents.
+                    <br><br>
+                    As heavy machinery passed through the area, radioactive dust from the 1986 nuclear catastrophe was
+                    blown into the air by Russian forces who had taken control of the defunct nuclear plant in
+                    Chernobyl, northern Ukraine. The dust has been suspended, which is dangerous for those in the area,
+                    but powerful gusts could transport it across a broad area with residents.
+                    <br><br>
+                    Attacks on military, industrial, and hospital sites can also release radioactive material. There are
+                    also concerns that Russia may be employing "depleted uranium weapons," which can pierce lighter iron
+                    and leave highly poisonous uranium particles when used.
+                    <br><br>
+                    Russia has targeted military sites like airfields, fuel and ammunition storage facilities in the
+                    first week of fighting. Massive fires emitted heavy metals and other hazardous elements as a result
+                    of the attacks. According to the Conflict and Environment Observatory, or CEOBS, a UK-based NGO that
+                    monitors and publicizes data on the environmental components of armed conflicts, fighting in
+                    Ukraine's Black Sea Biosphere Reserve, a UNESCO protected area, has resulted in flames that can be
+                    seen from space. CEOBS has developed a list of environmentally sensitive locations that were
+                    attacked during the invasion's first few days.
+                    <br><br>
+                    Pollution from Military Sites & Materials
+                    <br><br>
+                    Russia's bombardment of Ukrainian military assets, including those in civilian areas, has
+                    characterized the first two days of fighting. In Krasnopillia, Krivoy Rog, Dnipro, and Zhitomir,
+                    ammunition storage facilities were among them. Hostomel, Gostomel, Chuhuyev, Chernobaevka,
+                    Melitopol, Ivano-Frankivsk, Mykolaiv, and Millerovo (all in Russia) have airfields and petroleum
+                    storage tanks, as well as naval facilities.
+                    <br><br>
+                    As a result, fires have erupted, polluting the atmosphere. The civilian areas were engulfed in large
+                    plumes of smoke. These are made up of toxic gasses and particulates, as well as heavy metals and
+                    energetic materials, which were stored with conventional weapons. There will be significant soil and
+                    water contamination at these sites, and the extent to which these pollutants can migrate from
+                    military facilities will vary by site. Pollution from firefighting foams may be present in areas
+                    where flames were attempted to be extinguished. Naval sites that have been damaged have the
+                    potential to pollute the coast. This new pollution may add to existing military contamination in
+                    areas where facilities have been in operation for a long time. On a smaller scale, smoldering tanks,
+                    transportation vehicles, crashed aircraft, and other combat remains pollute the environment. Whether
+                    planned or unintentional, attacks on ships can endanger the marine ecosystem
+                    <br><br>
+                   <h4> Nuclear Facilities & Radiation Risks</h4>
+                   <br><br>
+                    The Chernobyl nuclear power plant was hit by fighting on February 24th. The decommissioning and
+                    decontamination of the site of the world's worst nuclear disaster is currently ongoing. The site was
+                    captured by the Russian military, and workers are being kept captive, according to "reliable
+                    accounts." This could increase the likelihood of a significant incident if routine maintenance
+                    decommissioning is halted.
+                    <br><br>
+                    As the invasion's first day came to an end, three sensors in the automated radiation monitoring
+                    system revealed excessive levels of gamma radiation in the Chernobyl Exclusion Zone. The reported
+                    radiation dose was around 28 times the yearly limit. The reasons for this are currently unknown,
+                    however the IAEA suggests that it could be due to resuspended dust caused by tracked vehicle
+                    movements.
+                    <br><br>
+                    Experts claim that one of the purposes of this action by Russian troops was to prevent Ukrainian
+                    nationalists from entering the territory of the facility to carry out provocations with radioactive
+                    materials, according to the Russian media. Meanwhile, the Ukrainian parliament's speaker expressed
+                    concern that it could be used in a Russian false-flag operation. Chernobyl will very certainly
+                    remain a crucial part of the environmental propaganda war because of its significance.
+                    <br><br>
+                    Aside from nuclear-related sites, radioactive sources and materials can also be found in industrial
+                    sites, hospitals, and military institutions. Finally, there are valid concerns that Russian tanks
+                    may be equipped with 125mm depleted uranium ammunition, necessitating wreckage analyses.
+                    <br><br>
+                   <h4> Industrial Infrastructure</h4>
+                   <br><br>
+
+                    Various industrial locations can be found in Ukraine. According to the Environmental Performance
+                    Index, even before the conflict, the country ranked low on environmental metrics such as air
+                    quality, biodiversity production, and ecosystem health. Because of its coal mining, metallurgy, and
+                    chemical-manufacturing facilities, the Donbas region in eastern Ukraine has long been regarded as
+                    one of the most polluted parts of the country.
+                    <br><br>
+                    The dangers of an environmental disaster in the heavily industrialized Donbas region have been a
+                    major source of concern for the past eight years. Communities and forces on both sides of the line
+                    of contact are aware of the dangers, but as the conflict escalates, the likelihood of an event
+                    increases, especially if the mostly static line of contact moves.
+                    <br><br>
+                    The abandonment of groundwater pumping from the region's coal mines may have already set the stage
+                    for a longer-term environmental catastrophe in the Donbas. The extent to which the ground has been
+                    deforming due to rising groundwater was revealed in a study. Mine drainage is generally contaminated
+                    with high amounts of salts and metals, damaging wells and drinking water sources, and subsidence can
+                    cause damage to buildings and infrastructure. The outflow from the Yunkom mine, which was the
+                    location of a nuclear test in the 1970s, is of particular concern.
+                    <br><br>
+                    A grain elevator in the city of Uman was damaged, in addition to chemical, metallurgical, and energy
+                    facilities. Ukraine and Russia are key grain exporters, and price rises are expected to have an
+                    impact on global food security, particularly in nations like Yemen. "The deepening of violence in
+                    Ukraine is likely to further boost gasoline and food prices, particularly grains in the
+                    import-dependent country," the World Food Programme said.
+                    <br><br>
+
+
+                    Fighting in densely populated regions, in particular, carries a greater risk of artillery
+                    accidentally hitting a vulnerable location. The prolonged violence has repercussions far beyond
+                    Ukraine, as the country is a significant supplier of crops to countries all around the world. More
+                    than 40% of Ukraine's wheat and corn exports go to the Middle East and Africa, countries that are
+                    already suffering from food shortages and might be further exacerbated by any disruptions. A major
+                    portion of these exports originate in the country's endangered eastern regions, and combat that
+                    extends beyond separatist-controlled areas might exacerbate food insecurity, according to the UN.
+                    <br><br>
+                    Environmental fears in Ukraine are not new, and they have been felt particularly strongly in the
+                    areas of the country most affected by the conflict, which began in 2014 and has so far claimed the
+                    lives of over 13,000 people. Eastern Ukraine, known as the Donbas, is heavily industrialized and was
+                    already regarded as one of the most polluted areas of the country before the war. It struggled to
+                    deal with toxic waste from a history of coal mining, metallurgy, and chemical production; after the
+                    war, many of its operational factories were forced to close, increasing the risk that they would
+                    harm the environment as they languished.
+
+                </p>
+            </div>
+
+    </body>
+
+    <!-- article 1 end -->
+    <!-- Footer -->
+    <div class="container-fluid1">
+
+        <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+            <!-- ombre div  -->
+            <div id="container-fluid1"></div>
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+                            <!-- Links -->
+
+                            <h5>
+                                <a href="#!" class="text-white" style="text-decoration: none;">About us</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./privacy.html" class="text-white" style="text-decoration: none;">Privacy
+                                    Policy</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./tc.html" class="text-white" style="text-decoration: none;">Terms &
+                                    Conditions</a>
+                            </h5>
+
+                            <h5>
+                                <a href="" class="text-white" style="text-decoration: none;">Contact</a>
+                            </h5>
+                        </div>
+                        <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for
+                                        our newsletter for
+                                        the latest news and insights on sustainability and climate change
+                                    </label>
+
+                                    <div class="col p-4"> <input type="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter email"></div>
+                                    <div class="col p-4"><button type="submit"
+                                            class="btn btn-secondary">Subscribe</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+</body>
+<!-- <script src="BlogJs/Blog1.js"></script> -->
+
+</html>

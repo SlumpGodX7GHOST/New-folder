@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Home.css" media="screen">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/Blog Page/css/main.css">
+
+    <style>
+        .top-right {
+            position: absolute;
+            background-color: white;
+            font-size: 1.5vh;
+            padding: 4px 7px 4px 7px;
+            /* top: 8px; */
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid;
+            box-shadow: 1px 1px 2px 1px #888888;
+            right: 0px;
+            /* color: black; */
+            /* box-shadow: 2px 2px red; */
+            /* text-shadow:1px 1px 2px rgb(17, 92, 232); */
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Button used to open the contact form - fixed at the bottom of the page */
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        /* The popup form - hidden by default */
+        .form-popup {
+            display: none;
+            position: fixed;
+            text-align: center;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #817b7b;
+            z-index: 9;
+        }
+
+        #myPDF {
+            display: none;
+            width: 100%;
+            height: 975px;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus,
+        .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            background-color: black;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <title>INSIGHTS</title>
+</head>
+
+<body>
+
+    <!-- form popup 1 -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container" name="myForm" id="report1" action="#">
+            <!--take data from the form in backend and  redirect to the pdf file according the id -->
+
+
+
+            <input type="text" placeholder="Enter Name" id="NameReport1" name="userName" required>
+
+
+            <input type="text" placeholder="Enter Mail" id="MailReport1" name="userMail" required>
+
+
+            <button type="submit" class="btn cancel" onclick="validate()">Submit</button>
+            <!--onclick="viewReport1()" -->
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    <!-- form popup end 1 -->
+    <!-- header div  -->
+    <header class="header-area">
+        <div class="header-container">
+
+            <!-- <div class="col" style="background-color: red;">sf</div> -->
+            <div class=" site-logo" d="logoid">
+                <a><img src="./images/Utopiic Registered logo-02.png" width="200vh">
+                </a>
+            </div>
+            <div class=" mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class=" site-nav-menu">
+                <ul class="primary-menu" style="padding-top: 1vh;">
+                    <li class="text-white">About us</li>
+                    <li class="text-white">Insights</li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="container-fluid1"></div>
+    </header>
+    <!-- artile 1 -->
+
+    <body class="u-body u-xl-mode">
+        <header class="u-clearfix u-header u-header" id="sec-bafd">
+            <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+                <h1 class="u-text u-text-default u-text-1" style="padding-top:3.5% ;">The Catastrophic Climate-Finance
+                    Circle</h1>
+        </header>
+
+        <section class="u-clearfix u-white u-section-1" id="carousel_fb95">
+
+            <div class="u-clearfix u-sheet u-sheet" style="padding-bottom: 8% ;">
+                <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
+                    <div class="u-layout">
+                        <div class="u-layout-row">
+                            <div
+                                class="u-container-style u-layout-cell u-left-cell u-similar-fill u-size-27 u-layout-cell-1">
+
+                                <div class="u-container-layout u-container-layout-1">
+                                    <img class="u-absolute-hcenter-xs u-expanded u-image u-image-1"
+                                        src="images/img_220406010714.jpg">
+                                </div>
+                            </div>
+                            <div
+                                class="u-container-style u-layout-cell u-right-cell u-similar-fill u-size-33 u-layout-cell-2">
+                                <div class="u-container-layout u-valign-middle-md u-valign-top-xs u-container-layout-2">
+                                    <p class="u-text u-text-1">&nbsp;When big banks started failing across Wall Street
+                                        and the housing and stock markets plummeted in 2008, the world realized how
+                                        important financial regulation is for economic stability – and how swiftly the
+                                        effects can cascade throughout the economy when regulators are asleep at the
+                                        wheel. Climate change has a drastic altering effect on the global economy.
+                                        Despite Wall Street jokes about the weather being a terrible excuse for bad
+                                        economic data, climate change is now plainly fast enough to alter economic
+                                        forecasts. How long until projecting GDP is largely, if not entirely, dependent
+                                        on projected weather patterns?
+                                        <br><br>
+                                        These issues are already on the minds of officials. Various government and
+                                        corporate organizations have attempted to model the economic implications of
+                                        climate change. Climate change is a significant economic threat today. Once
+                                        again, how financial regulators and central banks respond will have a big impact
+                                        on how much it incapacitates the economies. In 2015, former Bank of England
+                                        governor Mark Carney listed a number of climate-related hazards that might
+                                        disrupt the financial system. Extreme weather costs are rising, while lawsuits
+                                        against firms that contribute to climate change are dropping in value.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="u-text u-text-2">
+                    <br>
+                    Nobel Laureate and American economist Joseph Stiglitz concurs. He argued that a sharp increase in
+                    carbon prices – which governments levy on companies for emitting climate-warming greenhouse gasses –
+                    could spark a new financial crisis, this time centered on the fossil fuel industry, its suppliers,
+                    and the banks that finance them, with consequences for the rest of the economy.
+                    <br><br>
+
+                   <h4> Why does Climate Change pose a risk to the financial system?</h4>
+                   <br><br>
+                    Climate change poses a systemic risk to the financial sector, which necessitates increased
+                    regulatory monitoring and mitigating actions. Systemic risks in the financial system are hazards
+                    that have the potential to destabilize the system's normal functioning and have major negative
+                    effects on the actual economy. At least two types of climate-related hazards cross this threshold:
+                    <br><br>
+                    1) Physical risks connected with more frequent extreme weather events and long-term environmental
+                    changes
+                    <br><br>
+                    2) Transition risks associated with the policy and technology reforms required to establish a
+                    greener economy.
+                    <br><br>
+                    Carbon-intensive assets could be stranded, and the value of other financial instruments could be
+                    affected. The massive amount of predicted losses owing to physical and transition risks, as well as
+                    the potential for those losses to occur quickly, could have a devastating impact on systemically
+                    significant financial institutions and broader financial markets. Importantly, financial
+                    institutions are not only exposed to the physical and transition risks posed by climate change, but
+                    they are also actively amplifying those risks by continuing to fund activities that exacerbate
+                    climate change. Between 2016 and 2018, the six major US Wall Street banks committed over $700
+                    billion to fossil fuel financing. According to a 2016 poll, the top insurers had $528 billion in
+                    fossil fuel investments, and the top asset managers had boosted their ownership of assets linked to
+                    carbon-intensive industries by 20% in the last few years.
+
+                    <br><br>
+
+                   <h4> Physical Risk</h4>
+                   <br><br>
+                    Increases in the frequency and severity of damaging floods, droughts, fires, and hurricanes, as well
+                    as rising sea levels, can result in destabilizing losses for insurance companies, banks, and other
+                    financial intermediaries with direct and indirect exposure to various affected industries and
+                    assets. Stress at a large, sophisticated, and interconnected financial institution—a systemically
+                    significant firm—or correlated stress among smaller enterprises all facing the same risks could
+                    spread stress throughout the financial system. Between 2016 and 2018, the United States was hit by
+                    45 natural disasters, each costing at least $1 billion. Natural disasters caused an average annual
+                    economic loss of around $150 billion over the same time period. In comparison to previous decades,
+                    this represents a significant rise in both severity and frequency. From 1980 to 2019, there were an
+                    average of six natural disasters per year that generated more than $1 billion in damage, with total
+                    yearly natural catastrophe losses of just under $50 billion.
+                    <br><br>
+
+
+                   <h4> Transition Risk</h4>
+                   <br><br>
+                    Aside from these physical dangers, the financial system could be destabilized by very quick losses
+                    in carbon-intensive assets as a result of the urgently needed transition to a greener economy.
+                    Carbon-sensitive assets in the utilities, energy, transportation, industrial, and other sectors
+                    could lose value if policymakers took the necessary steps to decarbonize the economy, or if
+                    technical advancements made that move financially advantageous. Such action or innovation might
+                    dramatically raise the price of carbon, stranding certain fossil fuel assets and lowering the value
+                    of other carbon-sensitive assets. One estimate puts the current value of possible losses at $18
+                    trillion, based on a broad assessment of stranded assets, not only those directly in the fossil fuel
+                    sector. Adam Tooze, a history professor at Columbia University, estimates carbon-sensitive
+                    industries are responsible for up to one-third of all equities and fixed income assets. By enhancing
+                    the financial system's resilience, financial regulatory measures are designed to reduce both the
+                    likelihood and severity of disruptive crises. It's past time for policymakers to implement bold
+                    regulatory and supervisory measures to ensure that the financial sector is ready to securely handle
+                    the physical and transition risks posed by climate change. Mitigating the financial stability
+                    consequences of a quick transition may also make policymakers more likely to execute the essential
+                    transition steps in the first place.
+
+                    <br><br>
+
+                    Climate change poses a threat to the financial system's stability, and thus falls under the purview
+                    of financial authorities. They must recognize the emergence of systemic risk and take efforts to
+                    strengthen financial institutions and markets' resilience. Delaying action will only increase the
+                    chances of a climate shock disrupting the financial system and having a significant impact on the
+                    broader economy.
+
+
+
+                </p>
+            </div>
+
+    </body>
+
+    <!-- article 1 end -->
+    <!-- Footer -->
+    <div class="container-fluid1">
+
+        <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+            <!-- ombre div  -->
+            <div id="container-fluid1"></div>
+
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+
+                        <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+                            <!-- Links -->
+
+                            <h5>
+                                <a href="#!" class="text-white" style="text-decoration: none;">About us</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./privacy.html" class="text-white" style="text-decoration: none;">Privacy
+                                    Policy</a>
+                            </h5>
+
+                            <h5>
+                                <a href="./tc.html" class="text-white" style="text-decoration: none;">Terms &
+                                    Conditions</a>
+                            </h5>
+
+                            <h5>
+                                <a href="" class="text-white" style="text-decoration: none;">Contact</a>
+                            </h5>
+                        </div>
+                        <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+                            <div class="container">
+
+                                <div class="row">
+                                    <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for
+                                        our newsletter for
+                                        the latest news and insights on sustainability and climate change
+                                    </label>
+
+                                    <div class="col p-4"> <input type="email" class="form-control"
+                                            id="exampleInputEmail1" aria-describedby="emailHelp"
+                                            placeholder="Enter email"></div>
+                                    <div class="col p-4"><button type="submit"
+                                            class="btn btn-secondary">Subscribe</button></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+    </div>
+
+</body>
+<!-- <script src="BlogJs/Blog1.js"></script> -->
+
+</html>
