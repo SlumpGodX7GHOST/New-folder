@@ -203,7 +203,7 @@ body{
     }
 
     .card-image-top{
-        width:50%;
+        width:70%;
     }
 
     .card-body{
@@ -232,8 +232,33 @@ body{
     }
 
     .card-body{
-        height: 27vh !important;
+        height: 25vh !important;
         overflow: hidden !important;
     }
 
 }
+
+@media screen and (max-width:800px) {
+  .card-title{
+      font-size: 14px;
+  }
+  
+  .top-right{
+      font-size: 12px;
+  }
+
+  .description{
+      font-size: 16px;
+  }
+
+  .card-image-top{
+      width:50px;
+      overflow: hidden !important;
+  }
+
+  .card-body{
+      height: 28vh !important;
+      overflow: hidden !important;
+  }
+}
+
